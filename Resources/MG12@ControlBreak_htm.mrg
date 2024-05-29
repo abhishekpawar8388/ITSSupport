@@ -1,0 +1,43 @@
+<html> 
+
+<body>
+
+<!$MGIF_PrintComments>
+===============================================================================<br>
+This shows how to print header/detail kind of data in HTML<br>
+
+The first REPEAT block just prints the name as a header, in big text.
+
+Next, a table is printed, using a second REPEAT block.
+ 
+===============================================================================<br>
+<!$MGENDIF>
+
+<H2> My Address List </H2> 
+
+<!$MGREPEAT>
+
+<H3> <!$MG_Title> <!$MG_FirstName> <!$MG_LastName> </H3> 
+ 
+
+<!$MGIF_HasPhones>
+<TABLE border="5" frame="vsides" rules="cols" class="MG_TABLE" cellpadding="5">
+ <tr>
+  <td> # </td>
+  <td>Phone Type</td>
+  <td>Phone Number</td>
+ </tr>
+<!$MGENDIF>
+ 
+ <!$MGREPEAT>
+  <tr>
+   <td> <!$MG_Seq2> </td>
+   <td><!$MG_PhoneType></td>
+   <td><!$MG_Phone></td>
+   </tr>
+ <!$MGENDREPEAT>
+
+<!$MGENDREPEAT>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+color
+couleur
+red
+rouge
+yellow
+jaune
+blue
+bleu
+green
+vert
+person type
+type de personne
+man
+homme
+woman
+femme
+young child
+jeune enfant
+holiday
+fête
+Christmas
+Noël
+New Year
+Nouvelle Année
+Hanukkah
+Hanoucca
+Solstice
+Solstice
+uniPaaS is
+uniPaaS est
+terrific
+sensationnel
+beautiful
+de toute beauté
+fast
+rapide
+amazing
+incroyable
+food
+aliment
+chicken
+poulet
+fish
+poisson
+beef
+bœuf
+tofu
+tofu
+what to pack
+ce que pour emballer
+trousers
+pantalon
+blouse
+chemisier
+skirt
+contourner
+shoes
+chaussures
+toothbrush
+brosse à dents
+travelling companion
+compagnon de voyage
+friend
+camarade
+aquaintance
+connaissance
+enemy
+adversaire
+feelings
+sentiments
+tired
+fatigué
+talkative
+volubile
+bored
+ennuyé

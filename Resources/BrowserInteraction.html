@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<SCRIPT language="JavaScript">
+<!--
+function update(newmsg) {
+  frm.msg.value=newmsg;
+}
+function sendmsg(msg) {
+  var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+  var Win10 = ( navigator.userAgent.match(/(Windows Phone 10|Windows NT 10)/g) ? true : false );
+  var Android = ( navigator.userAgent.match(/Android|android/g) ? true : false );
+  if( iOS ){ 
+	window.location.href="MGExternalEvent:"+msg; 
+  }
+else if ( Android ){
+	window.external.MGExternalEvent(msg);
+}
+ else {  
+    CefSharp.PostMessage(msg); 
+  }
+}
+-->
+</SCRIPT>
+<style>
+body { margin: 0px; overflow:hidden }
+</style>
+</HEAD>
+<BODY bgcolor="#BEC8DC">
+<form id="frm">
+<BR>
+Browser text:
+<input type="text" value="Browser field" id="msg" size=30>
+<input type="button" value="Send to Magic" id="send" onClick="sendmsg(frm.msg.value)">
+</form>
+</BODY>
+</HTML>

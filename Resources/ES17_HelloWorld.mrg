@@ -1,0 +1,20 @@
+<HTML>
+<!-- This is an example of a really simple webpage -->
+<!-- http://localhost/uniScripts/MGrqcgi.exe?appname=eBoard&prgname=Hello_World  This didn't work because of caps -->
+ 
+
+<!--
+This is the one that worked:
+http://localhost/uniscripts/MGrqcgi.exe?appname=eBoard&prgname=Hello_World
+ -->
+
+<head>
+<title>Hello World</title>
+</head>
+
+<body>
+<H2 ALIGN="center">Hello World</H2>
+<h2 align=center>This is my first program</h2>
+
+</BODY>
+</HTML>

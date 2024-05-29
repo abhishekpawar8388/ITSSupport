@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="jsignature/jquery.signaturepad.css">
+  <!--[if lt IE 9]><script src="jsignature/flashcanvas.js"></script><![endif]-->
+  <script src="jsignature/jquery-1.7.2.min.js"></script>
+  <script src="jsignature/jquery.signaturepad.min.js"></script>
+  <script src="jsignature/json2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sigPad').signaturePad({drawOnly:true});
+    });
+  </script>
+  <script type="text/javascript">
+	function sendMessage(msg) {
+		if (navigator.userAgent.match(/Android/i))
+			{ window.external.MGExternalEvent(msg); }
+		else if (navigator.userAgent.match(/iPhone|iPad|iPod/i))
+			{ window.location.href='MGExternalEvent:'+msg; }
+		else if (navigator.userAgent.match(/BlackBerry/i))
+			{ MGExternalEvent(msg);}
+		else
+			{ window.external.MGExternalEvent(msg); }
+	}
+  </script>
+</head>
+<body scroll="no">
+<form method="post" action="" class="sigPad">
+    <canvas class="pad" width="200" height="100" style= "border:1px solid black"> </canvas>
+    <input type="hidden" name="output" class="output">
+ 	<button type="button" class="clearButton">Clear</button>&nbsp;
+	<button type="button" onclick="javascript:sendMessage(output.value)">Save</button>&nbsp;
+</form>
+</body>

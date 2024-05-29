@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="11009"/>
+    <WithIsn val="Y"/>
+    <LastIsn val="1"/>
+    <LastIsnFolder val="0"/>
+    <Folders/>
+  </Header>
+
+  <HelpRepository>
+    <HelpScreens>
+      <Help Type="U" id="1" name="google (As help page)">
+        <PropertyList model="HELP_URL">
+          <URL id="19" valUnicode="http://www.google.com"/>
+        </PropertyList>
+      </Help>
+    </HelpScreens>
+  </HelpRepository>
+
+</Application>

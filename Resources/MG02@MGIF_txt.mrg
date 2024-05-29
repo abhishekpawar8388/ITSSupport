@@ -1,0 +1,11 @@
+
+<!$MGIF_PrintComments>
+===============================================================================
+This block of text will only print if the PrintComments tag is linked
+to a Variable or Expression that evaluates to TRUE at runtime.
+===============================================================================
+<!$MGENDIF>
+
+<!$MGREPEAT>
+<!$MG_Title>   <!$MG_FirstName>   <!$MG_LastName>
+<!$MGENDREPEAT>

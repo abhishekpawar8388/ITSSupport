@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, scale=1.0, user-scalable=no" />
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0px; padding: 0px; overflow:hidden }
+  #map_canvas { height: 100% }
+</style>
+<script type="text/javascript"
+  src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  var map;
+  var geocoder = new google.maps.Geocoder();
+  function Initialize() {
+    var myOptions = {zoom: 8,mapTypeId: google.maps.MapTypeId.ROADMAP};
+    map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+    // for the route
+    var polyOptions = {strokeColor: '#000000',strokeOpacity: 1.0, strokeWeight: 3};
+    poly = new google.maps.Polyline(polyOptions);
+    poly.setMap(map);
+  }
+
+  function ShowAddress(address,showmarker) {
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+        if (showmarker==1) {
+          var marker = new google.maps.Marker({map: map,position: results[0].geometry.location});
+        }
+      }
+    });
+  }
+
+  function AddRoute(address,showmarker) {
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        var path = poly.getPath();
+        path.push(results[0].geometry.location);
+        if (showmarker==1) {
+          var marker = new google.maps.Marker({map: map, position: results[0].geometry.location});
+        }
+      }
+    });
+  }
+
+  function ClearRoute() {
+    var points = poly.getPath();
+    while(points.getLength() > 0) points.pop();
+  }
+
+
+</script>
+</head>
+
+<body onload="Initialize();">
+  <div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>
+
+
+

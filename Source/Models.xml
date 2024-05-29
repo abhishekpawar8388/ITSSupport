@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14072.00"/>
+    <WithIsn val="Y"/>
+    <LastIsn val="27"/>
+    <LastIsnFolder val="1"/>
+  </Header>
+
+  <ModelsRepository>
+    <Models>
+      <Object id="1" name="Integer">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="8NC"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object id="2" name="Money">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N8.2C+$;--$;"/>
+          <_Dec id="181" val="2"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object id="3" name="Date">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_DATE" id="1"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object id="4" name="Data Entry">
+        <PropertyList model="CTRL_RICH_CLIENT_EDIT"/>
+      </Object>
+      <Object id="5" name="Display Only">
+        <PropertyList model="CTRL_RICH_CLIENT_EDIT">
+          <Color id="51" val="5"/>
+          <Modifiable id="53"/>
+          <TabInto id="269"/>
+          <AllowParking id="315"/>
+        </PropertyList>
+      </Object>
+      <Object id="6" name="Form">
+        <PropertyList model="FORM_RICH_CLIENT">
+          <ShowGrid id="37"/>
+          <GridX id="38" val="2"/>
+          <GridY id="39" val="2"/>
+          <BorderStyle id="64" val="1"/>
+          <_Comment id="218"/>
+          <FormName id="311"/>
+        </PropertyList>
+      </Object>
+      <Object id="7" name="Tab Button">
+        <PropertyList model="CTRL_RICH_CLIENT_PUSH_BUTTON">
+          <Placement id="20" top="100"/>
+          <ControlName id="46" val="Tab"/>
+          <Color id="51" val="10"/>
+          <Format id="82" valUnicode="Tab"/>
+          <ImageListFileName id="88"/>
+          <ButtonStyle id="96" val="3"/>
+          <RaiseEvent id="234">
+            <EventType val="S"/>
+            <KeyCombinationID val="128"/>
+          </RaiseEvent>
+          <HoveringColor id="473" val="11"/>
+          <VisitedColor id="474" val="12"/>
+        </PropertyList>
+      </Object>
+      <Object id="8" name="Shift+Tab Button">
+        <PropertyList model="CTRL_RICH_CLIENT_PUSH_BUTTON">
+          <Placement id="20" top="100"/>
+          <ControlName id="46" val="Back Tab"/>
+          <Format id="82" valUnicode="Back Tab"/>
+          <ImageListFileName id="88"/>
+          <ButtonStyle id="96" val="1"/>
+          <RaiseEvent id="234">
+            <EventType val="S"/>
+            <KeyCombinationID val="138"/>
+          </RaiseEvent>
+        </PropertyList>
+      </Object>
+      <Object id="9" name="Vector Data">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="256"/>
+          <Size id="174" val="256"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object id="10" name="Vector Integer">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="8"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object id="12" name=".NET calendar with mapping">
+        <PropertyList model="CTRL_RICH_CLIENT_DOTNET">
+          <ObjectType id="478" val="System.Windows.Forms.MonthCalendar"/>
+          <DNControlValueProperty id="541" val="SelectionStart"/>
+          <DNControlValueChangedEvent id="542" val="DateChanged"/>
+        </PropertyList>
+      </Object>
+      <Object id="26" name=".NET ComboBox">
+        <PropertyList model="CTRL_RICH_CLIENT_DOTNET">
+          <ObjectType id="478" val="System.Windows.Forms.ComboBox"/>
+          <DNControlValueProperty id="541" val="SelectedValue"/>
+          <DNControlValueChangedEvent id="542" val="SelectedValueChanged"/>
+          <DNControlDataSourceProperty id="543" val="DataSource"/>
+          <DNControlDisplayMemberProperty id="544" val="DisplayMember"/>
+          <DNControlValueMemberProperty id="545" val="ValueMember"/>
+        </PropertyList>
+      </Object>
+      <Object id="27" name="deviceIDsVectorModel">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="500"/>
+          <Size id="174" val="500"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+    </Models>
+  </ModelsRepository>
+
+</Application>

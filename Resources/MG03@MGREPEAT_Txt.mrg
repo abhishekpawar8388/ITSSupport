@@ -1,0 +1,16 @@
+<!$MGIF_PrintComments>
+===============================================================================
+This text is outside the REPEAT block, so it will only print one time.
+===============================================================================
+<!$MGENDIF>
+
+'Seq','Record ID','Title','First Name','Last Name','Next Contact Date','Category','Active','Monetary value'
+<!$MGREPEAT>
+<!$MGIF_PrintComments2>
+===============================================================================
+This text is inside the REPEAT block, so it will print each time a Form Output
+is executed.
+===============================================================================
+<!$MGENDIF>
+'<!$MG_Seq>','<!$MG_RecordID>','<!$MG_Title>','<!$MG_FirstName>','<!$MG_LastName>',<!$MG_BDay>,'<!$MG_Category>',<!$MG_Active>,<!$MG_Money>
+<!$MGENDREPEAT>

@@ -1,0 +1,76 @@
+color
+bandera
+red
+rojo
+yellow
+amarillo
+blue
+azul
+green
+verde
+person type
+tipo de persona
+man
+señor
+woman
+mujer
+young child
+niño pequeño
+holiday
+día festivo
+Christmas
+Navidad
+New Year
+Año Nuevo
+Hanukkah
+Jánuca
+Solstice
+solsticio
+uniPaaS is
+uniPaaS es
+terrific
+estupendo
+beautiful
+bonito
+fast
+rápido
+amazing
+maravilloso
+food
+comida
+chicken
+pollo
+fish
+pescado
+beef
+carne de res
+tofu
+queso de soja
+what to pack
+qué empacar
+trousers
+pantalones
+blouse
+blusa
+skirt
+falda
+shoes
+zapatos
+toothbrush
+cepillo dental
+travelling companion
+compañero de viaje
+friend
+amigo
+aquaintance
+conocimiento
+enemy
+contrario
+feelings
+sentimientos
+tired
+cansado
+talkative
+hablador
+bored
+perforado

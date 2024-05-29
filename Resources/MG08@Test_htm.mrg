@@ -1,0 +1,40 @@
+<html> 
+
+<body>
+<!$MGIF_PrintComments><br>
+===============================================================================<br>
+Although the tokens and HTML tags are surrounded by &gt; greater-than and
+&lt; less-than signs, only the Magic tags start with "&lt;!$MG".
+
+===============================================================================<br>
+<!$MGENDIF>
+
+
+<table border="1" width="100%" class="MG_TABLE">
+
+<THEAD>
+ <tr>
+<td width="12%">Record ID</td>
+<td width="12%">Title</td>
+<td width="12%">First Name</td>
+<td width="12%">Last Name</td>
+<td width="17%">Next Contact Date</td>
+<td width="12%">Category</td>
+<td width="12%">Active</td>
+<td width="14%">Monetary value</td>
+ </tr>
+<!$MGREPEAT>
+ <tr>
+  <td width="12%" class="MG_DATA1"><!$MG_RecordID></td>
+  <td width="12%" class="MG_DATA2"><!$MG_Title></td>
+  <td width="12%" class="MG_DATA3"><!$MG_FirstName></td>
+  <td width="12%" class="MG_DATA4"><!$MG_LastName></td>
+  <td width="12%" class="MG_DATA5"><!$MG_BDay></td>
+  <td width="12%" class="MG_DATA6"><!$MG_Category></td>
+  <td width="12%" class="MG_DATA7"><!$MG_Active></td>
+  <td width="12%" class="MG_DATA8"><!$MG_Money></td>
+ </tr>
+<!$MGENDREPEAT>
+
+</body>
+</html>

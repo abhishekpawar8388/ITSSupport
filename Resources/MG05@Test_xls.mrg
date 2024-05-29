@@ -1,0 +1,35 @@
+<html> 
+<html>
+<body>
+
+<table border="1" width="100%" class="MG_TABLE">
+
+<!$MGIF_PrintComments>
+<caption>Monthly savings</caption>
+<!$MGENDIF>
+
+ <tr>
+<th width="12%">Record ID</td>
+<th width="12%">Title</td>
+<th width="12%">First Name</td>
+<th width="12%">Last Name</td>
+<th width="17%">Next Contact Date</td>
+<th width="12%">Category</td>
+<th width="12%">Active</td>
+<th width="14%">Monetary value</td>
+ </tr>
+<!$MGREPEAT>
+  <td width="12%" class="MG_DATA1"><!$MG_RecordID></td>
+  <td width="12%" class="MG_DATA2"><!$MG_Title></td>
+  <td width="12%" class="MG_DATA3"><!$MG_FirstName></td>
+  <td width="12%" class="MG_DATA4"><!$MG_LastName></td>
+  <td width="12%" class="MG_DATA5"><!$MG_BDay></td>
+  <td width="12%" class="MG_DATA6"><!$MG_Category></td>
+  <td width="12%" class="MG_DATA7"><!$MG_Active></td>
+  <td width="12%" class="MG_DATA8"><!$MG_Money></td>
+ </tr>
+<!$MGENDREPEAT>
+
+</table>
+</body>
+</html>

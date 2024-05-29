@@ -1,0 +1,25 @@
+
+<!$MGIF_PrintComments>
+===============================================================================
+This shows how to print header/detail kind of data. 
+
+There are two REPEAT blocks, one inside the other. The first
+block is used by the parent task, which contains the tag table for 
+ Seq, Title, FirstName and LastName.
+ 
+ The inner block has tags that are referenced by the child task:
+   Seq2, PhoneType, Phone.
+ 
+===============================================================================
+<!$MGENDIF>
+
+<!$MGREPEAT>
+<!$MG_Seq> <!$MG_Title>  <!$MG_FirstName> <!$MG_LastName>
+______________________________________________________________________
+<!$MGREPEAT>
+        <!$MG_Seq2> <!$MG_PhoneType>  <!$MG_Phone> 
+<!$MGENDREPEAT>
+
+<!$MGENDREPEAT>
+
+ 

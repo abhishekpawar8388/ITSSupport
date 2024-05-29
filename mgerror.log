@@ -1,0 +1,8 @@
+﻿ <113753842287748800> 05/01/2024 12:35:50.802     [Error  ] - Flow - Update: Can't execute client operation, because execution started in a server-side task prefix (see execution path). [Not Executed]
+ <113753842287748800> 05/01/2024 12:35:50.804     [Error  ] - Flow - Update: Can't execute client operation, because execution started in a server-side task prefix (see execution path). [Not Executed]
+ <-1> 24/01/2024 14:32:56.417     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <-1> 24/01/2024 14:32:56.417     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <362043757423223296> 23/04/2024 10:18:53.257     [Error  ] - File not found: : D:\XPA410Studio\XPA410\SampleProjects\Rich Internet Samples\TestPrint.PDF, Program: "RP08_Print to PDF".
+ <-1> 15/05/2024 16:21:00.139     [Error  ] - Only Rich Client task/program may call Rich Client task/program, Program: "Main Program".
+ <-1> 15/05/2024 16:21:06.749     [Error  ] - Only Rich Client task/program may call Rich Client task/program, Program: "Main Program".
+ <-1> 15/05/2024 16:21:08.499     [Error  ] - Only Rich Client task/program may call Rich Client task/program, Program: "Main Program".

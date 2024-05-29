@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns="urn:Magic.printdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Magic.printdata">
+	<xs:element name="AddressBook">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Contact" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Record_ID" type="xs:string"/>
+							<xs:element name="Description" type="xs:string"/>
+							<xs:element name="Title" type="xs:string"/>
+							<xs:element name="First_Name" type="xs:string"/>
+							<xs:element name="Last_Name" type="xs:string"/>
+							<xs:element name="Birthday" type="xs:date"/>
+							<xs:element name="Next_Contact_Date" type="xs:date"/>
+							<xs:element name="Category" type="xs:string"/>
+							<xs:element name="Active" type="xs:boolean"/>
+							<xs:element name="Monetary_value" type="xs:string"/>
+							<xs:element name="Last_modified_date" type="xs:date"/>
+							<xs:element name="Last_modified_time" type="xs:time"/>
+
+							<xs:element name="Phones" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+									
+										<xs:element name="Seq" type="xs:int"/>		
+										<xs:element name="Phone_Number" type="xs:string"/> 
+										<xs:element name="Phone_Type" type="xs:string"/> 
+									
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="Addresses" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+
+										<xs:element name="Seq"  type="xs:int"/>				
+										<xs:element name="Addr1" type="xs:string"/> 
+										<xs:element name="Addr2" type="xs:string"/> 
+										<xs:element name="City"  type="xs:string"/> 
+										<xs:element name="State" type="xs:string"/> 
+										<xs:element name="Zip"   type="xs:string"/> 
+										<xs:element name="Country" type="xs:string"/> 
+ 
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="Blobs" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Seq"  type="xs:int"/>		
+										<xs:element name="Type" type="xs:string"/>
+										<xs:element name="Picture" type="xs:base64Binary"/>										 
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Letters">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CustLetter" minOccurs="0" maxOccurs="unbounded">	
+           <xs:complexType mixed="true">
+             <xs:sequence>
+               <xs:element name="LSeq" type="xs:positiveInteger"/>
+               <xs:element name="Name" type="xs:string"/>
+               <xs:element name="CustID" type="xs:positiveInteger"/>
+               <xs:element name="DueDate" type="xs:date"/>
+             </xs:sequence>
+           </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+     </xs:complexType>
+	</xs:element>
+
+</xs:schema>

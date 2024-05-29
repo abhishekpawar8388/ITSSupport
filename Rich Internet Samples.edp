@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <_Project>
+    <ProjectName val="Rich Internet Samples"/>
+    <VCProjectID val="0"/>
+    <VCActive val="N"/>
+    <WorkOffline val="N"/>
+    <VCUseGitPlugin val="N"/>
+    <SourceDirectory val="Source"/>
+    <ExportsDirectory val="Exports"/>
+    <GUID val="{90E7D6DA-61E6-4B5F-8406-63B7EE4B6879}"/>
+    <Version min="13020.10"/>
+    <SourceVersion val="14100.00"/>
+  </_Project>
+
+</Application>

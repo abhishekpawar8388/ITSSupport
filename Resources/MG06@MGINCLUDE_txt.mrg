@@ -1,0 +1,19 @@
+
+<!$MGIF_PrintComments>
+===============================================================================
+This shows how to include one file within another. A second file, the
+Disclaimer.txt file, is included after the data prints. The file to be
+included can be a tag and the name set at runtime.
+===============================================================================
+<!$MGENDIF>
+
+<!$MGREPEAT>
+'<!$MG_Seq>','<!$MG_RecordID>','<!$MG_Title>','<!$MG_FirstName>' 
+<!$MGENDREPEAT>
+
+****************************************************
+Following is the template used to print this report
+This could be considered recursive, except that this is only
+embedded after the rest of the report is printed.
+****************************************************
+<!$MGINCLUDE><!$MG_IncludeFile><!$MGENDINCLUDE>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="13021"/>
+    <WithIsn val="Y"/>
+    <_InternalTask val="N"/>
+    <IsRoot val="N"/>
+    <InIndex val="N"/>
+    <UniqueISNConvState val="12"/>
+  </Header>
+
+  <ProgramsRepository>
+    <Programs>
+      <Task MainProgram="N">
+        <Header Description="NE14_Drag and drop a file" ISN_2="1" LastIsn="1" id="600">
+          <Public val="RNE14"/>
+          <ExecutionRight comp="-1"/>
+          <Resident val="N"/>
+          <SQL val="N"/>
+          <ReturnValue>
+            <ReturnValueAttr/>
+            <ParametersAttributes/>
+          </ReturnValue>
+          <SqlWhereExist val="N"/>
+          <TaskType val="C"/>
+          <Interactive val="Y"/>
+          <External val="N"/>
+          <Offline val="N"/>
+          <FormType val="M"/>
+          <DotNetObjectExists val="Y"/>
+          <LastModified _date="736395" _time="41071" date="07/03/2017" time="11:24:31"/>
+        </Header>
+        <ItemIsn val="6"/>
+        <Resource>
+          <Columns>
+            <Column id="2" name="vDummy">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="3"/>
+                <UpdateStyle id="176" val="A"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="3"/>
+                <_Negative id="192"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="4" name="DN Textbox">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_BLOB" id="1"/>
+                <Size id="174" val="28"/>
+                <Definition id="175" val="1"/>
+                <_FieldStyle id="276" val="5"/>
+                <ObjectType id="478" val="System.Windows.Forms.TextBox"/>
+              </PropertyList>
+            </Column>
+            <Column id="8" name="Filename">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="1024"/>
+                <StoredAs id="173" val="1"/>
+                <Size id="174" val="1024"/>
+                <_Flip id="194"/>
+              </PropertyList>
+            </Column>
+            <Column id="5" name="sender">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_BLOB" id="1"/>
+                <StoredAs id="173" val="29"/>
+                <Size id="174" val="28"/>
+                <Definition id="175" val="1"/>
+                <_FieldStyle id="276" val="5"/>
+                <ObjectType id="478" val="System.Object"/>
+              </PropertyList>
+            </Column>
+            <Column id="6" name="e">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_BLOB" id="1"/>
+                <StoredAs id="173" val="29"/>
+                <Size id="174" val="28"/>
+                <Definition id="175" val="1"/>
+                <_FieldStyle id="276" val="5"/>
+                <ObjectType id="478" val="System.Windows.Forms.DragEventArgs"/>
+              </PropertyList>
+            </Column>
+          </Columns>
+        </Resource>
+        <Information>
+          <Key>
+            <Mode val="N"/>
+          </Key>
+          <DB comp="-1"/>
+          <Sort>
+            <CLS val="A"/>
+          </Sort>
+          <ForceRecordDelete DEL="N"/>
+          <EndTaskCondition val="N"/>
+          <EvaluateEndCondition val="B"/>
+          <InitialMode val="M"/>
+          <Locate Direction="A"/>
+          <Range Direction="A"/>
+          <VarRange/>
+          <TaskProperties>
+            <SelectionTable val="N"/>
+            <ConfirmUpdate CNFU="N"/>
+            <ConfirmCancel val="N"/>
+            <ErrorStrategy val="R"/>
+            <LockingStrategy val="M"/>
+            <CacheStrategy val="D"/>
+            <ForceRecordSuffix val="N"/>
+            <TransactionMode val="D"/>
+            <TransactionBegin val="P"/>
+            <PreloadView val="N"/>
+            <AllowEmptyDataview val="Y"/>
+            <KeepCreatedContext val="N"/>
+          </TaskProperties>
+          <SIDE_WIN>
+            <AllowOptions val="Y"/>
+            <AllowQuery val="Y"/>
+            <AllowModify val="Y"/>
+            <AllowCreate val="Y"/>
+            <AllowDelete val="Y"/>
+            <AllowLocate val="Y"/>
+            <AllowRange val="Y"/>
+            <AllowIndexChange val="N"/>
+            <AllowSorting val="Y"/>
+            <AllowIOFiles val="N"/>
+            <TabbingCycle val="R"/>
+            <AllowEvents val="Y"/>
+            <AllowIndexOptimization val="Y"/>
+            <AllowLocationInQuery val="Y"/>
+            <AllowPrintingData val="N"/>
+          </SIDE_WIN>
+          <WIN>
+            <OpenTaskWindow val="Y"/>
+            <CloseTaskWindow val="Y"/>
+            <ForegroundWindow val="Y"/>
+            <FlipFld val="N"/>
+            <RefreshTaskWindow ReturnValue="N"/>
+          </WIN>
+          <BOX>
+            <Direction val="V"/>
+          </BOX>
+        </Information>
+        <TaskLogic>
+          <LogicUnit id="2" propagate="78">
+            <Level val="R"/>
+            <Type val="M"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+              <PublicObject comp="-1"/>
+            </Event>
+            <ExecuteOn_ val="O"/>
+            <LogicLines>
+              <LogicLine>
+                <DATAVIEW_SRC FlowIsn="2" Type="M">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </DATAVIEW_SRC>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="1" FlowIsn="3" id="1">
+                  <Column val="2"/>
+                  <Type val="V"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="2"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="2" FlowIsn="4" id="2">
+                  <Column val="4"/>
+                  <Type val="V"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="6">
+                  <Type val="0"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="4" FlowIsn="7" id="4">
+                  <Column val="8"/>
+                  <Type val="V"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="5"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="3" propagate="78">
+            <Level val="H"/>
+            <Type val="U"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event FieldID="2">
+              <EventType val="D"/>
+              <EventText val="DragDrop"/>
+              <PublicObject comp="-1"/>
+            </Event>
+            <Expanded val="1"/>
+            <ExecuteOn_ val="O"/>
+            <LogicLines>
+              <LogicLine>
+                <Select FieldID="5" FlowIsn="8" id="5">
+                  <Column val="5"/>
+                  <Type val="V"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="6" FlowIsn="9" id="6">
+                  <Column val="6"/>
+                  <Type val="V"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="10">
+                  <OperationType val="."/>
+                  <TaskID comp="-1"/>
+                  <Lock val="N"/>
+                  <Arguments>
+                    <Argument>
+                      <Variable val="4"/>
+                      <Skip val="N"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="6"/>
+                      <Skip val="N"/>
+                      <Name val="e"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.Windows.Forms.DragEventArgs"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <ReturnValue val="3"/>
+                  <FunctionName val="func"/>
+                  <SnippetCode val="using System;&#xA;using System.IO;&#xA;using System.Text;&#xA;using System.Windows.Forms;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static System.String func(ref System.Windows.Forms.DragEventArgs e)&#xA;&#x9;{&#xA;&#x9;&#x9;string [] fileNames = null;&#xA;&#x9;&#x9;string selectedFile = &quot;&quot;;&#xA;&#x9;&#x9;try&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;// File is dragged from file explorer&#xA;&#x9;&#x9;&#x9;if ( e.Data.GetDataPresent(DataFormats.FileDrop,false) == true)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;fileNames = (string []) e.Data.GetData(DataFormats.FileDrop);&#xA;&#x9;&#x9;&#x9;&#x9;// Return the first file path&#xA;&#x9;&#x9;&#x9;&#x9;if (fileNames.Length>0)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;selectedFile = fileNames[0];&#xA;&#x9;&#x9;&#x9;&#x9;/*&#xA;&#x9;&#x9;&#x9;&#x9;// alternatively - If there are muliple files - handle each file passed as needed&#xA;&#x9;&#x9;&#x9;&#x9;foreach( string fileName in fileNames)&#xA;&#x9;&#x9;&#x9;&#x9;{&#x9;// do what you are going to do with each filename &#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;// File is dragged from outlook&#xA;&#x9;&#x9;&#x9;else if (e.Data.GetDataPresent(&quot;FileGroupDescriptor&quot;))&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;// Get the filename of the attachment, build a full-path name and store it in the temporary folder&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;// set up to obtain the FileGroupDescriptor and extract the file name&#xA;&#x9;&#x9;&#x9;&#x9;Stream theStream = (Stream) e.Data.GetData(&quot;FileGroupDescriptor&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;byte [] fileGroupDescriptor = new byte[theStream.Length];&#xA;&#x9;&#x9;&#x9;&#x9;theStream.Read(fileGroupDescriptor,0,(int)theStream.Length);&#xA;&#x9;&#x9;&#x9;&#x9;selectedFile = System.Text.Encoding.UTF8.GetString(fileGroupDescriptor).Replace(&quot;\0&quot;,String.Empty).Replace(&quot;\u0001&quot;,String.Empty.Trim());&#xA;&#x9;&#x9;&#x9;&#x9;theStream.Close();&#xA;&#x9;&#x9;&#x9;&#x9;// set up a temp filename&#xA;&#x9;&#x9;&#x9;&#x9;selectedFile = Path.GetTempPath() + selectedFile.ToString();&#xA;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;// get the actual raw data for the attached file and save it to a temp path.&#xA;&#x9;&#x9;&#x9;&#x9;// get the actual raw file into memory&#xA;&#x9;&#x9;&#x9;&#x9;MemoryStream ms = (MemoryStream) e.Data.GetData(&quot;FileContents&quot;,true);&#xA;&#x9;&#x9;&#x9;&#x9;// allocate enough bytes to hold the raw data&#xA;&#x9;&#x9;&#x9;&#x9;byte [] fileBytes = new byte[ms.Length];&#xA;&#x9;&#x9;&#x9;&#x9;// set starting position at first byte and read in the raw data&#xA;&#x9;&#x9;&#x9;&#x9;ms.Position = 0;&#xA;&#x9;&#x9;&#x9;&#x9;ms.Read(fileBytes,0,(int)ms.Length);&#xA;&#x9;&#x9;&#x9;&#x9;// create a file and save the raw data to it&#xA;&#x9;&#x9;&#x9;&#x9;FileStream fs = new FileStream(selectedFile,FileMode.Create);&#xA;&#x9;&#x9;&#x9;&#x9;fs.Write(fileBytes,0,(int)fileBytes.Length);&#xA;&#x9;&#x9;&#x9;&#x9;fs.Close();  // close the file&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;// verify that the file was saved&#xA;&#x9;&#x9;&#x9;&#x9;FileInfo tempFile = new FileInfo(selectedFile);&#xA;&#x9;&#x9;&#x9;&#x9;if ( tempFile.Exists == false)   //file was not created&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;selectedFile=&quot;&quot;;&#xA;&#x9;&#x9;  &#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;catch (Exception ex)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;MessageBox.Show (ex.Message);&#xA;&#x9;&#x9;&#x9;// To do - don't use MessageBox here - Outlook or Explorer is waiting !&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return selectedFile;&#xA;&#x9;}&#xA;&#xA;}"/>
+                  <CompiledCode val="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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="Y"/>
+                  <CompileTime HighDateTime="30578451" LowDateTime="3484322582"/>
+                  <AssemblyIds val="-812272197,"/>
+                  <RetainFocus val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+        </TaskLogic>
+        <TaskForms>
+          <FormEntry _last_isn="6" _last_test_id="6" id="1">
+            <PropertyList model="FORM_RICH_CLIENT">
+              <X id="21" val="34"/>
+              <Y id="22" val="32"/>
+              <Width id="23" val="410"/>
+              <Height id="24" val="178"/>
+              <TitleBar id="26" val="Y"/>
+              <SystemMenu id="27" val="Y"/>
+              <MinimizeButton id="28" val="Y"/>
+              <MaximizeButton id="29" val="Y"/>
+              <ShowGrid id="37"/>
+              <GridX id="38" val="2"/>
+              <GridY id="39" val="2"/>
+              <BorderStyle id="64" val="1"/>
+              <_Comment id="218"/>
+              <FormName Exp="1" id="311" valUnicode="NE14_Drag and drop a file"/>
+            </PropertyList>
+            <Control PDOD="128" _test_id="1" id="1">
+              <PropertyList model="CTRL_RICH_CLIENT_DOTNET">
+                <X id="21" val="11"/>
+                <Y id="22" val="10"/>
+                <Width id="23" val="157"/>
+                <Height id="24" val="14"/>
+                <ControlName id="46" val="DN Textbox"/>
+                <TabOrder id="314" val="1"/>
+                <AllowParking id="315"/>
+                <ObjectProperties id="479">
+                  <PropertyList model="GENERIC">
+                    <Generic DataType="12" id="492842720" name="AllowDrop" val="Y"/>
+                    <Generic DataType="2" id="82289507" name="CharacterCasing" val="2"/>
+                    <Generic DataType="12" id="306445957" name="ReadOnly" val="Y"/>
+                    <Generic DataType="32" id="217801188" name="Text" valUnicode="Drop your file here"/>
+                  </PropertyList>
+                </ObjectProperties>
+                <DotnetObject FieldID="2" id="546"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="1" _test_id="3" id="3">
+              <PropertyList model="CTRL_RICH_CLIENT_EDIT">
+                <Model ID="MODEL_RICH_CLIENT" id="1">
+                  <Var FieldID="1"/>
+                </Model>
+                <X id="21" val="368"/>
+                <Y id="22" val="147"/>
+                <Width id="23" val="6"/>
+                <Height id="24" val="10"/>
+                <Data FieldID="1" id="43"/>
+                <ControlName id="46" val="vCode"/>
+                <MultiLineEdit id="71"/>
+                <ExpansionWindow id="84"/>
+                <TabOrder id="314" val="3"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="128" _test_id="4" id="4">
+              <PropertyList model="CTRL_RICH_CLIENT_GROUP">
+                <Text id="19"/>
+                <X id="21" val="179"/>
+                <Y id="22" val="5"/>
+                <Width id="23" val="225"/>
+                <Height id="24" val="167"/>
+                <Color id="51" val="14"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="4" PDOD="128" _test_id="5" id="5">
+              <PropertyList model="CTRL_RICH_CLIENT_RICH_TEXT">
+                <Text id="19" valUnicode="{\rtf1\fbidis\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}&#xD;&#xA;{\colortbl ;\red0\green0\blue0;\red255\green0\blue128;}&#xD;&#xA;\viewkind4\uc1\pard\ltrpar\cf1\b\f0\fs20 This sample uses a .NET \cf2 TexBox \cf1 control to catch the drop action and act accordingly.\par&#xD;&#xA;\par&#xD;&#xA;You can drag a file from File Explorer or an attachment from Outlook into the TextBox control.\par&#xD;&#xA;The file will then be seen in the Browser control.\par&#xD;&#xA;Outlook attachments will be saved in the temporary folder first.\par&#xD;&#xA;\par&#xD;&#xA;Note that if Magic xpa is started as an Administrator, you will only be able to drop files from other applications that are started as an Administrator. Refer to: https://blogs.msdn.microsoft.com/patricka/2010/01/28/q-why-doesnt-drag-and-drop-work-when-my-application-is-running-elevated-a-mandatory-integrity-control-and-uipi/\par&#xD;&#xA;}&#xD;&#xA;"/>
+                <X id="21" val="182"/>
+                <Y id="22" val="10"/>
+                <Width id="23" val="211"/>
+                <Height id="24" val="159"/>
+                <Color id="51" val="14"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="128" _test_id="6" id="6">
+              <PropertyList model="CTRL_RICH_CLIENT_BROWSER">
+                <X id="21" val="11"/>
+                <Y id="22" val="27"/>
+                <Width id="23" val="157"/>
+                <Height id="24" val="145"/>
+                <Data FieldID="4" id="43"/>
+                <ControlName id="46" val="Filename"/>
+                <TabOrder id="314" val="2"/>
+              </PropertyList>
+            </Control>
+          </FormEntry>
+        </TaskForms>
+        <Expressions>
+          <Expression id="1">
+            <ExpSyntax val="'NE14_ How Do I Drop a File from Explorer or an Attachment from Outlook?'"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+        </Expressions>
+        <EVNT DESC="Show Week Numbers" FORCE_EXIT="N" id="1">
+          <Event>
+            <EventType val="N"/>
+            <PublicObject comp="-1"/>
+          </Event>
+        </EVNT>
+        <EVNT DESC="change code" FORCE_EXIT="N" id="2">
+          <Event>
+            <EventType val="N"/>
+            <PublicObject comp="-1"/>
+          </Event>
+        </EVNT>
+      </Task>
+    </Programs>
+  </ProgramsRepository>
+
+</Application>

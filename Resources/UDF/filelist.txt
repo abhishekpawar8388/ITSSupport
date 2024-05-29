@@ -1,0 +1,4 @@
+Source files - MyUtils.cpp, Export.def, MyUtils.h
+Compiled DLL - MyUtils.dll
+eDeveloper test program export - TestProgram.xml
+Entire vS2003 project - MyUtils.zip

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="10001.04"/>
+    <APPLICATION val="N"/>
+    <WithIsn val="N"/>
+    <WITH_MODELS val="N"/>
+    <MAIN_PRG_VARS val="0"/>
+    <MAIN_PRG_DSPS val="1"/>
+    <Arguments END="5" START="5"/>
+  </Header>
+
+
+
+<ProgramsRepository>
+<Programs>
+
+<Task MainProgram="N">
+
+  <Header Description="Test MyUtils">
+    <ExecutionRight/>
+    <Resident val="N"/>
+    <SQL val="N"/>
+    <ReturnValue>
+      <ParametersAttributes/>
+    </ReturnValue>
+    <SqlWhereExist val="N"/>
+    <TaskType val="O"/>
+    <External val="N"/>
+    <FormType val="N"/>
+    <LastModified _date="732959" _time="68476" date="10/10/2007" time="19:01:16"/>
+  </Header>
+
+  <Resource>
+    <Columns>
+      <Column id="1" name="str1">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_UNICODE"/>
+          <Picture valUnicode="10"/>
+          <Size val="20"/>
+          <_FieldStyle val="1"/>
+        </PropertyList>
+      </Column>
+      <Column id="2" name="str2">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_UNICODE"/>
+          <Picture valUnicode="10"/>
+          <Size val="20"/>
+          <_FieldStyle val="1"/>
+        </PropertyList>
+      </Column>
+      <Column id="3" name="str result">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_UNICODE"/>
+          <Picture valUnicode="20"/>
+          <Size val="40"/>
+          <_FieldStyle val="1"/>
+        </PropertyList>
+      </Column>
+    </Columns>
+    <ColumnsLastIsn val="3"/>
+  </Resource>
+
+  <Information>
+    <Key>
+      <Mode val="N"/>
+    </Key>
+    <DB/>
+    <Sort>
+      <CLS val="A"/>
+    </Sort>
+    <ForceRecordDelete DEL="N"/>
+    <EndTaskCondition val="N"/>
+    <EvaluateEndCondition val="B"/>
+    <InitialMode val="M"/>
+    <Locate Direction="A"/>
+    <Range Direction="A"/>
+    <TaskProperties>
+      <SelectionTable val="N"/>
+      <ConfirmUpdate CNFU="N"/>
+      <ConfirmCancel val="N"/>
+      <ErrorStrategy val="R"/>
+      <LockingStrategy val="M"/>
+      <CacheStrategy val="D"/>
+      <ForceRecordSuffix val="N"/>
+      <TransactionMode val="D"/>
+      <TransactionBegin val="P"/>
+      <PreloadView val="N"/>
+      <AllowEmptyDataview val="Y"/>
+      <KeepCreatedContext val="N"/>
+    </TaskProperties>
+    <SIDE_WIN>
+      <AllowOptions val="Y"/>
+      <AllowQuery val="Y"/>
+      <AllowModify val="Y"/>
+      <AllowCreate val="Y"/>
+      <AllowDelete val="Y"/>
+      <AllowLocate val="Y"/>
+      <AllowRange val="Y"/>
+      <AllowIndexChange val="Y"/>
+      <AllowSorting val="Y"/>
+      <AllowIOFiles val="Y"/>
+      <RecordCycle val="Y"/>
+      <AllowEvents val="Y"/>
+      <AllowIndexOptimization val="Y"/>
+      <AllowLocationInQuery val="Y"/>
+      <AllowPrintingData val="N"/>
+    </SIDE_WIN>
+    <WIN>
+      <OpenTaskWindow val="Y"/>
+      <CloseTaskWindow val="Y"/>
+      <ForegroundWindow val="Y"/>
+      <FlipFld val="N"/>
+      <RefreshTaskWindow ReturnValue="N"/>
+    </WIN>
+    <BOX>
+      <Direction val="V"/>
+    </BOX>
+  </Information>
+
+  <TaskLogic>
+    <LogicUnit propagate="78">
+      <Level val="R"/>
+      <Type val="M"/>
+      <_DspTemplate val="0"/>
+      <_HeaderPosition val="1"/>
+      <Scope val="S"/>
+      <EngineDirective val="S"/>
+      <ShowMessage val="Y"/>
+      <Condition val="89"/>
+      <_TotalVariabls val="3"/>
+      <_TotalVirtuals val="3"/>
+      <Event>
+        <EventType val="S"/>
+        <PublicObject comp="-1"/>
+      </Event>
+      <LogicLines>
+        <LogicLine>
+          <DATAVIEW_SRC Type="M">
+            <Condition val="N"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </DATAVIEW_SRC>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="A">
+            <ASS val="2"/>
+            <Column val="1"/>
+            <Type val="V"/>
+            <IsParameter val="N"/>
+            <_RecomputeIndex val="1"/>
+            <_FormIndex val="1"/>
+            <_ControlIndex val="1"/>
+            <_OleSubformIdx val="1"/>
+            <_TabbingOrderDspIndex val="1"/>
+            <_DitIndexForToolkit val="2"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="B">
+            <ASS val="3"/>
+            <Column val="2"/>
+            <Type val="V"/>
+            <IsParameter val="N"/>
+            <_RecomputeIndex val="1"/>
+            <_FormIndex val="1"/>
+            <_ControlIndex val="1"/>
+            <_OleSubformIdx val="1"/>
+            <_TabbingOrderDspIndex val="1"/>
+            <_DitIndexForToolkit val="4"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+        <LogicLine>
+          <Select Name="C">
+            <Column val="3"/>
+            <Type val="V"/>
+            <IsParameter val="N"/>
+            <_RecomputeIndex val="1"/>
+            <_FormIndex val="1"/>
+            <_ControlIndex val="1"/>
+            <_OleSubformIdx val="1"/>
+            <_TabbingOrderDspIndex val="1"/>
+            <_DitIndexForToolkit val="6"/>
+            <DIFF_UPDATE val="T"/>
+            <Condition val="Y"/>
+            <Modifier val="S"/>
+            <Direction val="C"/>
+          </Select>
+        </LogicLine>
+      </LogicLines>
+    </LogicUnit>
+    <LogicUnit propagate="78">
+      <Level val="H"/>
+      <Type val="U"/>
+      <_DspTemplate val="0"/>
+      <_HeaderPosition val="5"/>
+      <Scope val="S"/>
+      <EngineDirective val="S"/>
+      <ShowMessage val="Y"/>
+      <Condition val="89"/>
+      <Event>
+        <EventType val="U"/>
+        <PublicObject comp="-1" obj="1"/>
+      </Event>
+      <Expanded val="1"/>
+      <LogicLines>
+        <LogicLine>
+          <Invoke>
+            <OperationType val="U"/>
+            <TaskID obj="1"/>
+            <Lock val="N"/>
+            <Arguments>
+              <Argument>
+                <Expression val="4"/>
+                <Skip val="N"/>
+              </Argument>
+              <Argument>
+                <Var val="A"/>
+                <Skip val="N"/>
+              </Argument>
+              <Argument>
+                <Var val="B"/>
+                <Skip val="N"/>
+              </Argument>
+              <Argument>
+                <Var val="C"/>
+                <Skip val="N"/>
+              </Argument>
+            </Arguments>
+            <Wait val="Y"/>
+            <SyncData val="N"/>
+            <Convention val="S"/>
+            <Condition val="Y"/>
+            <Modifier val="B"/>
+            <Direction val="C"/>
+          </Invoke>
+        </LogicLine>
+      </LogicLines>
+    </LogicUnit>
+  </TaskLogic>
+
+  <TaskForms>
+    <FormEntry _last_test_id="7">
+      <PropertyList model="FORM_GUI0">
+        <_Comment/>
+        <FormName valUnicode="Test MyUtils"/>
+        <_TabbingOrder val="1"/>
+        <UserStateIdentifier/>
+      </PropertyList>
+      <Control _test_id="4">
+        <PropertyList model="CTRL_GUI0_STATIC">
+          <Text valUnicode="str1:"/>
+          <Left val="4"/>
+          <Top val="8"/>
+          <Width val="16"/>
+          <Height val="8"/>
+          <Font val="4"/>
+          <Style val="1"/>
+          <_Orientation/>
+        </PropertyList>
+      </Control>
+      <Control _test_id="1">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT">
+            <Var Column="1"/>
+          </Model>
+          <Left val="42"/>
+          <Top val="8"/>
+          <Width val="59"/>
+          <Height val="10"/>
+          <Data Column="A"/>
+          <ControlName val="str1"/>
+          <_Orientation/>
+          <TabOrder val="2"/>
+        </PropertyList>
+      </Control>
+      <Control _test_id="5">
+        <PropertyList model="CTRL_GUI0_STATIC">
+          <Text valUnicode="str2:"/>
+          <Left val="4"/>
+          <Top val="26"/>
+          <Width val="16"/>
+          <Height val="8"/>
+          <Font val="4"/>
+          <Style val="1"/>
+          <_Orientation/>
+        </PropertyList>
+      </Control>
+      <Control _test_id="2">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT">
+            <Var Column="2"/>
+          </Model>
+          <Left val="42"/>
+          <Top val="26"/>
+          <Width val="59"/>
+          <Height val="10"/>
+          <Data Column="B"/>
+          <ControlName val="str2"/>
+          <_Orientation/>
+          <TabOrder val="4"/>
+        </PropertyList>
+      </Control>
+      <Control _test_id="6">
+        <PropertyList model="CTRL_GUI0_STATIC">
+          <Text valUnicode="str result:"/>
+          <Left val="4"/>
+          <Top val="44"/>
+          <Width val="34"/>
+          <Height val="8"/>
+          <Font val="4"/>
+          <Style val="1"/>
+          <_Orientation/>
+        </PropertyList>
+      </Control>
+      <Control _test_id="3">
+        <PropertyList model="CTRL_GUI0_EDIT">
+          <Model ID="MODEL_GUI_INT">
+            <Var Column="3"/>
+          </Model>
+          <Left val="42"/>
+          <Top val="44"/>
+          <Width val="115"/>
+          <Height val="10"/>
+          <Data Column="C"/>
+          <ControlName val="str result"/>
+          <HorizontalScroll/>
+          <VerticalScroll/>
+          <AllowCRInData/>
+          <_Orientation/>
+          <ShowScrollBars/>
+          <TabOrder val="7"/>
+          <AllowParking/>
+        </PropertyList>
+      </Control>
+      <Control PDOD="128" _test_id="7">
+        <PropertyList model="CTRL_GUI0_PUSH_BUTTON">
+          <Left val="168"/>
+          <Top val="40"/>
+          <Width val="33"/>
+          <Height val="14"/>
+          <Format valUnicode="Concat"/>
+          <RaiseEvent>
+            <EventType val="U"/>
+            <PublicObject comp="-1" obj="1"/>
+          </RaiseEvent>
+          <TabOrder val="5"/>
+        </PropertyList>
+      </Control>
+    </FormEntry>
+  </TaskForms>
+
+  <Expressions>
+    <Expression>
+      <ExpSyntax val="'@MyUtils.Concat'"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="'ABC'"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="'DEF'"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="'UUU'"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="RTrim(A)"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+    <Expression>
+      <ExpSyntax val="RTrim(B)"/>
+      <ExpAttribute val="A"/>
+    </Expression>
+  </Expressions>
+
+  <EVNT DESC="Concat" FORCE_EXIT="N">
+    <Event>
+      <EventType val="N"/>
+      <PublicObject comp="-1"/>
+    </Event>
+  </EVNT>
+
+</Task>
+</Programs>
+</ProgramsRepository>
+
+</Application>

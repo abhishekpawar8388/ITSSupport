@@ -1,0 +1,40 @@
+
+<!$MGIF_PrintComments>
+===============================================================================
+This is a generic template that is used to set up the tags for the merge
+programs. It contains all the tabs, which makes it easy to set up the Tag table.
+
+Note that the templates used at runtime to not need to use all these tags. 
+
+Also note that there are several "Print comments" tags ... tags are not
+allowed to be used twice, so if you need to use one variable to print
+data in several places, you need to create several tokens that are linked
+to one variable
+===============================================================================
+<!$MGENDIF>
+
+<!$MGIF_PrintComments2> The tag below is a misc. text field that can be used
+for various text messages <!$MGENDIF>
+<!$MG_MiscComment>
+
+<!$MGIF_PrintComments3> The tags below can be used to insert the date and user <!$MGENDIF>
+<!$MG_Date> <!$MG_Time> <!$MG_User>
+
+
+<!$MGREPEAT>
+Seq = <!$MG_Seq>
+Record ID = <!$MG_RecordID>
+Title = <!$MG_Title>
+First Name = <!$MG_FirstName>
+Last Name = <!$MG_LastName>
+Birthday = <!$MG_BDay>
+Category = <!$MG_Category>
+Active = <!$MG_Active>
+Monetary value = <!$MG_Money>
+<!$MGENDREPEAT>
+
+
+File used to print this template:
+<!$MG_IncludeFile>
+
+

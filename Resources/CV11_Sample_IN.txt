@@ -1,0 +1,9 @@
+Some characters, such as umlaut a (ä) or u (ü) do not translate without the correct codepage.
+
+Here are the usual keyboard characters:
+
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+And here are some of the higher ascii values:
+
+ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüışÿ

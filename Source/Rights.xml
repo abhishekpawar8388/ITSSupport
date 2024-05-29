@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="11009"/>
+    <WithIsn val="Y"/>
+    <LastIsn val="2"/>
+    <LastIsnFolder val="0"/>
+    <Folders/>
+  </Header>
+
+  <RightsRepository>
+    <Rights>
+      <Right id="1" name="TOPSECRET">
+        <PublicRight val="Y"/>
+        <Key val="TOPSECRET"/>
+      </Right>
+      <Right id="2" name="ULTRA">
+        <PublicRight val="N"/>
+        <Key val="ULTRA"/>
+      </Right>
+    </Rights>
+  </RightsRepository>
+
+</Application>

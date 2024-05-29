@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="12030"/>
+    <WithIsn val="Y"/>
+    <_InternalTask val="N"/>
+    <IsRoot val="N"/>
+    <InIndex val="N"/>
+  </Header>
+
+  <ProgramsRepository>
+    <Programs>
+      <Task MainProgram="N">
+        <Header Description="-- save json as info as image" ISN_2="2" LastIsn="17" id="550">
+          <ExecutionRight comp="-1"/>
+          <Resident val="N"/>
+          <SQL val="N"/>
+          <ReturnValue>
+            <ReturnValueAttr/>
+            <TSK_PARAMS val="2"/>
+            <ParametersCount val="2"/>
+            <ParametersAttributes>
+              <Attr MgAttr="O"/>
+              <Attr MgAttr="A"/>
+            </ParametersAttributes>
+          </ReturnValue>
+          <SqlWhereExist val="N"/>
+          <TaskType val="B"/>
+          <External val="N"/>
+          <FormType val="M"/>
+          <DotNetObjectExists val="Y"/>
+          <ToBeMigrated val="Y"/>
+          <LastModified _date="734908" _time="24583" date="09/02/2013" time="06:49:43"/>
+        </Header>
+        <ItemIsn val="6"/>
+        <Resource>
+          <Columns>
+            <Column id="8" name="json signature">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_BLOB" id="1"/>
+                <StoredAs id="173" val="34"/>
+                <Size id="174" val="28"/>
+                <Definition id="175" val="1"/>
+                <_FieldStyle id="276" val="1"/>
+                <Content id="434" val="2"/>
+              </PropertyList>
+            </Column>
+            <Column id="7" name="output image file (server)">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="1024"/>
+                <StoredAs id="173" val="1"/>
+                <Size id="174" val="1024"/>
+                <_Flip id="194"/>
+              </PropertyList>
+            </Column>
+          </Columns>
+          <ColumnsLastIsn val="8"/>
+        </Resource>
+        <Information>
+          <Key>
+            <Mode val="N"/>
+          </Key>
+          <DB comp="-1"/>
+          <Sort>
+            <CLS val="A"/>
+          </Sort>
+          <ForceRecordDelete DEL="N"/>
+          <EndTaskCondition val="Y"/>
+          <EvaluateEndCondition val="B"/>
+          <InitialMode val="M"/>
+          <Locate Direction="A"/>
+          <Range Direction="A"/>
+          <VarRange/>
+          <TaskProperties>
+            <SelectionTable val="N"/>
+            <ConfirmUpdate CNFU="N"/>
+            <ConfirmCancel val="N"/>
+            <ErrorStrategy val="A"/>
+            <LockingStrategy val="I"/>
+            <CacheStrategy val="D"/>
+            <ForceRecordSuffix val="N"/>
+            <TransactionMode val="W"/>
+            <TransactionBegin val="T"/>
+            <PreloadView val="N"/>
+            <AllowEmptyDataview val="Y"/>
+            <KeepCreatedContext val="N"/>
+          </TaskProperties>
+          <SIDE_WIN>
+            <AllowOptions val="N"/>
+            <AllowQuery val="Y"/>
+            <AllowModify val="Y"/>
+            <AllowCreate val="Y"/>
+            <AllowDelete val="Y"/>
+            <AllowLocate val="Y"/>
+            <AllowRange val="Y"/>
+            <AllowIndexChange val="N"/>
+            <AllowSorting val="Y"/>
+            <AllowIOFiles val="N"/>
+            <RecordCycle val="Y"/>
+            <AllowEvents val="Y"/>
+            <AllowIndexOptimization val="Y"/>
+            <AllowLocationInQuery val="Y"/>
+            <AllowPrintingData val="N"/>
+          </SIDE_WIN>
+          <WIN>
+            <OpenTaskWindow val="N"/>
+            <CloseTaskWindow val="Y"/>
+            <ForegroundWindow val="Y"/>
+            <FlipFld val="N"/>
+            <RefreshTaskWindow ReturnValue="N"/>
+          </WIN>
+          <BOX>
+            <Direction val="V"/>
+          </BOX>
+        </Information>
+        <TaskLogic>
+          <LogicUnit id="2" propagate="78">
+            <Level val="R"/>
+            <Type val="M"/>
+            <_DspTemplate val="0"/>
+            <_HeaderPosition val="1"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <_TotalVariabls val="2"/>
+            <_TotalVirtuals val="2"/>
+            <PRM_LEN val="2"/>
+            <Event>
+              <EventType val="S"/>
+              <PublicObject comp="-1"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <DATAVIEW_SRC FlowIsn="2" Type="M">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </DATAVIEW_SRC>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="6" FlowIsn="15" id="6">
+                  <Column val="1"/>
+                  <Type val="V"/>
+                  <IsParameter val="Y"/>
+                  <_RecomputeIndex val="1"/>
+                  <_FormIndex val="1"/>
+                  <_ControlIndex val="1"/>
+                  <_OleSubformIdx val="1"/>
+                  <_TabbingOrderDspIndex val="1"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="5" FlowIsn="14" id="5">
+                  <Column val="2"/>
+                  <Type val="V"/>
+                  <IsParameter val="Y"/>
+                  <_RecomputeIndex val="1"/>
+                  <_FormIndex val="1"/>
+                  <_ControlIndex val="1"/>
+                  <_OleSubformIdx val="1"/>
+                  <_TabbingOrderDspIndex val="1"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="5" propagate="78">
+            <Level val="T"/>
+            <Type val="P"/>
+            <_DspTemplate val="0"/>
+            <_HeaderPosition val="4"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+              <PublicObject comp="-1"/>
+            </Event>
+            <Expanded val="1"/>
+            <LogicLines>
+              <LogicLine>
+                <Remark FlowIsn="20">
+                  <Type val="2"/>
+                  <Text val="This logic is executed in a batch task so it will be done on the server."/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="21">
+                  <Type val="2"/>
+                  <Text val="This is required when running the program from OS which does not support .NET (such as Android or iOS)"/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="27">
+                  <OperationType val="."/>
+                  <TaskID comp="-1"/>
+                  <Lock val="N"/>
+                  <Arguments>
+                    <Argument>
+                      <id val="1"/>
+                      <Skip val="N"/>
+                      <DotNetType val="void"/>
+                    </Argument>
+                    <Argument>
+                      <id val="2"/>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <Name val="json"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                    <Argument>
+                      <id val="3"/>
+                      <Variable val="2"/>
+                      <Skip val="N"/>
+                      <Name val="resultFilename"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <FunctionName val="func"/>
+                  <SnippetCode val="using System;&#xA;using System.Collections.Generic;&#xA;using System.Drawing;&#xA;using System.Drawing.Drawing2D;&#xA;using System.IO;&#xA;using System.Web.Script.Serialization;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void func(System.String json, System.String resultFilename)&#xA;&#x9;{&#xA;    &#x9;/// Draws a signature based on the JSON provided by Signature Pad.&#xA;    &#x9;/// &lt;param name=&quot;json&quot;>JSON string of line drawing commands.&lt;/param>&#xA;    &#x9;/// &lt;returns>Bitmap image containing the signature.&lt;/returns>&#xA;&#xA;&#x9;&#x9;// Default values&#xA;    &#x9;Color BackgroundColor = Color.White;&#xA;    &#x9;Color PenColor = Color.FromArgb(20, 83, 148);&#xA;    &#x9;int CanvasWidth = 200;&#xA;    &#x9;int CanvasHeight = 100;&#xA;    &#x9;float PenWidth = 2;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;var signatureImage = new Bitmap(CanvasWidth, CanvasHeight);&#xA;        signatureImage.MakeTransparent();&#xA;        using (var signatureGraphic = Graphics.FromImage(signatureImage))&#xA;        {&#xA;            signatureGraphic.Clear(BackgroundColor);&#xA;        }&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;// processing the signature&#xA;        using (var signatureGraphic = Graphics.FromImage(signatureImage))&#xA;        {&#xA;            signatureGraphic.SmoothingMode = SmoothingMode.AntiAlias;&#xA;            var pen = new Pen(PenColor, PenWidth);&#xA;            var serializer = new JavaScriptSerializer();&#xA;            // Next line may throw System.ArgumentException if the string&#xA;            // is an invalid json primitive for the SignatureLine structure&#xA;            var lines = serializer.Deserialize&lt;List&lt;SignatureLine>>(json);&#xA;            foreach (var line in lines)&#xA;            {&#xA;                signatureGraphic.DrawLine(pen, line.lx, line.ly, line.mx, line.my);&#xA;            }&#xA;        }&#xA;&#xA;&#x9;&#x9;// saving the image to file&#xA;&#x9;&#x9;signatureImage.Save(resultFilename);&#xA;&#x9;}&#xA; &#xA;&#x9;// Line drawing commands as generated by the Signature Pad JSON export option.&#xA;    private class SignatureLine&#xA;    {&#xA;        public int lx { get; set; }&#xA;        public int ly { get; set; }&#xA;        public int mx { get; set; }&#xA;        public int my { get; set; }&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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AgAAAAAAAAAAAAAAAQAtAAAAAAACAAAAAAAAAAAAAAAkAGQBAAAAAAMABQAAAAAAAAAAAFoAEwIAAAAAAwACABsAagAAAAAAADxNb2R1bGU+AG8xeTA0a29mLmRsbABTbmlwcGV0AFNpZ25hdHVyZUxpbmUAbXNjb3JsaWIAU3lzdGVtAE9iamVjdABmdW5jAGdldF9seABzZXRfbHgAZ2V0X2x5AHNldF9seQBnZXRfbXgAc2V0X214AGdldF9teQBzZXRfbXkALmN0b3IAPGx4PmtfX0JhY2tpbmdGaWVsZAA8bHk+a19fQmFja2luZ0ZpZWxkADxteD5rX19CYWNraW5nRmllbGQAPG15PmtfX0JhY2tpbmdGaWVsZABseABseQBteABteQBqc29uAHJlc3VsdEZpbGVuYW1lAHZhbHVlAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBvMXkwNGtvZgBTeXN0ZW0uRHJhd2luZwBDb2xvcgBnZXRfV2hpdGUARnJvbUFyZ2IAQml0bWFwAE1ha2VUcmFuc3BhcmVudABHcmFwaGljcwBJbWFnZQBGcm9tSW1hZ2UAQ2xlYXIASURpc3Bvc2FibGUARGlzcG9zZQBTeXN0ZW0uRHJhd2luZy5EcmF3aW5nMkQAU21vb3RoaW5nTW9kZQBzZXRfU21vb3RoaW5nTW9kZQBQZW4AU3lzdGVtLldlYi5FeHRlbnNpb25zAFN5c3RlbS5XZWIuU2NyaXB0LlNlcmlhbGl6YXRpb24ASmF2YVNjcmlwdFNlcmlhbGl6ZXIARGVzZXJpYWxpemUAU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMATGlzdGAxAEVudW1lcmF0b3IAR2V0RW51bWVyYXRvcgBnZXRfQ3VycmVudABEcmF3TGluZQBNb3ZlTmV4dABTYXZlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAAAAAyAAAAAAAIQSZC5vdARHtkNMIs35p1QACLd6XFYZNOCJBQACAQ4OAyAACAQgAQEIAyAAAQIGCAMoAAgIsD9ffxHVCjoEAAAREQcAAxERCAgIBSACAQgIBgABEhkSHQUgAQEREQUgAQERJQYgAgEREQwIMb84Vq02TjUGMAEBHgAOCAoBFRIxARIMBhUSMQESDAggABURNQETAAYVETUBEgwEIAATAAkgBQESKQgICAgDIAACBCABAQ4hBw0RERERCAgMEhUSGRIZEikSLRUSMQESDBIMFRE1ARIMBAEAAAAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBAAAAaCkAAAAAAAAAAAAAfikAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHApAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWEAAAEwCAAAAAAAAAAAAAEwCNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+AAABAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAAsASsAQAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAACIAQAAAQAwADAAMAAwADAANABiADAAAAAsAAIAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAIAAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMAAuADAALgAwAC4AMAAAADwADQABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAbwAxAHkAMAA0AGsAbwBmAC4AZABsAGwAAAAAACgAAgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAACAAAABEAA0AAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAbwAxAHkAMAA0AGsAbwBmAC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAkDkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="Y"/>
+                  <CompileTime HighDateTime="30279136" LowDateTime="1337823945"/>
+                  <AssemblyIds val="-1775812437,-1937260129,"/>
+                  <RetainFocus val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+        </TaskLogic>
+        <TaskForms>
+          <FormEntry id="3">
+            <PropertyList model="FORM_GUI0">
+              <_Comment id="218"/>
+              <FormName id="311" valUnicode="-- save json as info as image"/>
+            </PropertyList>
+          </FormEntry>
+        </TaskForms>
+        <EVNT DESC="Point" FORCE_EXIT="N" id="1">
+          <Event>
+            <EventType val="N"/>
+            <PublicObject comp="-1"/>
+          </Event>
+        </EVNT>
+        <EVNT DESC="Route" FORCE_EXIT="N" id="2">
+          <Event>
+            <EventType val="N"/>
+            <PublicObject comp="-1"/>
+          </Event>
+        </EVNT>
+      </Task>
+    </Programs>
+  </ProgramsRepository>
+
+</Application>

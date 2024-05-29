@@ -1,0 +1,5095 @@
+ <Application>
+ 
+<Header>
+
+  <Version val="14100.00"/>
+
+  <WithIsn val="Y"/>
+
+  <Exe comp="-1"/>
+
+  <LastIsn val="28"/>
+
+  <LastIsnFolder val="11"/>
+
+  <Folders>
+    <Folder id="1">
+      <Name val="Setup and Menu"/>
+    </Folder>
+    <Folder id="2">
+      <Name val="Memory Tables"/>
+    </Folder>
+    <Folder id="3">
+      <Name val="SQL Address Book"/>
+    </Folder>
+    <Folder id="4">
+      <Name val="SQL Users"/>
+    </Folder>
+    <Folder id="5">
+      <Name val="XML AddressBook"/>
+    </Folder>
+    <Folder id="6">
+      <Name val="XML Letters"/>
+    </Folder>
+    <Folder id="7">
+      <Name val="CountryName"/>
+    </Folder>
+    <Folder id="8">
+      <Name val="CountryNameResponse"/>
+    </Folder>
+    <Folder id="9">
+      <Name val="Requests"/>
+    </Folder>
+    <Folder id="10">
+      <Name val="Push Notification"/>
+    </Folder>
+    <Folder id="11">
+      <Name val="Data Synchronization"/>
+    </Folder>
+  </Folders>
+
+</Header>
+
+<DataRepositoryProperties/>
+ <DataSourceRepository>
+  <DataObjects>
+  
+<DataObject Comment="/* This contains the &quot;tree mode&quot; menu used for these programs */" FolderIsn="1" PhysicalName="Menu" Resident="N" UniqueISNConvState="12" data_source="Memory" id="1" name="Menu">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="3"/>
+
+  <Columns>
+    <Column id="5" name="Node ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="10"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="10"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="10" Size="10" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Parent ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="10"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="10"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="10" Size="10" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="1" name="PgmID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="150"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="150"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="150" Size="150" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="2" name="Node_Parent">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="10"/>
+          <Column val="5"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="10"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="1" name="PgmID">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="30"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="3" name="Description">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="150"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* General purpose temp table for displaying vectors and other data to the user, and allowing the user to choose and sort the data */" FolderIsn="1" PhysicalName="Temp_Alpha_List" Resident="N" UniqueISNConvState="12" data_source="Memory" id="2" name="Temp Alpha List">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <Columns>
+    <Column id="1" name="Seq (Unique)">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Choice">
+      <Comment val="/* Boolean checkbox. Can be used to allow the user to select or deselect each item */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <GuiDisplay id="158">
+          <PropertyList model="CTRL_GUI0_CHECKBOX"/>
+        </GuiDisplay>
+        <GuiDisplayTable id="159">
+          <PropertyList model="CTRL_GUI0_CHECKBOX"/>
+        </GuiDisplayTable>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Sort Order">
+      <Comment val="/* Can be used to allow the user to re-sort the list of data */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Alpha String">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Display String">
+      <Comment val="/* Secondary Alpha String */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Numeric data">
+      <Comment val="/* Use this field to hold misc. numeric data, if needed, or to link this table to another table, to create a checklist */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="9NC"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="9"/>
+        <_Negative id="192" val="Y"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="9NC" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Seq">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Sort Order">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* Data for test programs */&#xD;&#xA;&#xD;&#xA;For the sake of illustration, and to make installation easier on different platforms, these programs use memory tables and build the data on the fly. For your own programs, you can use them with any DBMS you like." FolderIsn="2" PhysicalName="Generic_Test_Table" Resident="N" UniqueISNConvState="12" data_source="Memory" id="3" name="Generic Test Table">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="4"/>
+
+  <Columns>
+    <Column id="1" name="Sequence#">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Sequence#"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Sequence#" PIC_U="6" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Description"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Description" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="First Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="First_Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="First_Name" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Last Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Name" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Phone Number">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Number"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Number" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_TIME" id="1"/>
+        <StoredAs id="173" val="23"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Time"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Time" PIC_U="HH:MM:SS" Size="4" allowed_null="N" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="23" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Date"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Date" PIC_U="##/##/####" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="7" name="Money">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="N9.2CZ +$;--$;"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Money"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="9"/>
+        <_Negative id="192" val="Y"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Money" PIC_U="N9.2CZ +$;--$;" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="8" name="Logical">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Logical"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Logical" PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="12" name="Color">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Color"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Color" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="13" name="Integer">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Integer"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Integer" PIC_U="6" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="15" name="Code">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="U12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="U12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="14" name="Text Blob">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_BLOB" id="1"/>
+        <GuiDisplay id="158">
+          <PropertyList model="CTRL_GUI0_EDIT"/>
+        </GuiDisplay>
+        <GuiDisplayTable id="159">
+          <PropertyList model="CTRL_GUI0_EDIT"/>
+        </GuiDisplayTable>
+        <GuiOutput id="160">
+          <PropertyList model="CTRL_GUI1_EDIT"/>
+        </GuiOutput>
+        <GuiOutputTable id="161">
+          <PropertyList model="CTRL_GUI1_EDIT"/>
+        </GuiOutputTable>
+        <Browser id="162">
+          <PropertyList model="CTRL_BROWSER_EDIT"/>
+        </Browser>
+        <BrowserTable id="163">
+          <PropertyList model="CTRL_BROWSER_EDIT"/>
+        </BrowserTable>
+        <TextBased id="164">
+          <PropertyList model="CTRL_TEXT_EDIT"/>
+        </TextBased>
+        <StoredAs id="173" val="29"/>
+        <Size id="174" val="28"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Text_Blob"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Text_Blob" Size="28" allowed_null="Y" attribute="O" context_cookies="Y" database_definition="1" id="231" storage="29"/>
+        <_FieldStyle id="276" val="1"/>
+        <Content id="434" val="2"/>
+        <RichClient id="453">
+          <PropertyList model="CTRL_RICH_CLIENT_EDIT"/>
+        </RichClient>
+        <RichClientTable id="454">
+          <PropertyList model="CTRL_RICH_CLIENT_EDIT"/>
+        </RichClientTable>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Sequence">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Sequence"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Description">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Description"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="256"/>
+          <Column val="9"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="3" name="Date/Time">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Date/Time"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="6"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="5"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="4" name="Last Name, first Name">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="20"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* A handy table to store many different code translations, for combo boxes or other sets of choices */&#xD;&#xA;&#xD;&#xA;Examples:&#xD;&#xA;&#xD;&#xA;GENDER M  Male &#xD;&#xA;GENDER F   Female &#xD;&#xA;COLOR   Y   Yellow&#xD;&#xA;COLOR   R   Red&#xD;&#xA;COLOR   G   Green&#xD;&#xA;" FolderIsn="2" PhysicalName="Generic_Codes_Table" Resident="N" UniqueISNConvState="12" data_source="Memory" id="4" name="Generic Codes Table">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="1" name="Category Code">
+      <Comment val="/* This field is used to group code types, so several different codes can reside in this table */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="U12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="U12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Choice Code">
+      <Comment val="/* The code that will be stored in the record. Usually a short mnemonic or number */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="U12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="U12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Choice Description">
+      <Comment val="/* The user-friendly text description that shows to the user */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Attached Numeric value">
+      <Comment val="/* Use this for any numeric data you want to keep attached to this code */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="9.2NC"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="9"/>
+        <_Negative id="192" val="Y"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="9.2NC" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Attached Text value">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Category, Code">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="12"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="12"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* This contains the &quot;tree mode&quot; menu used for these programs */" FolderIsn="2" PhysicalName="Generic_Tree" Resident="N" UniqueISNConvState="12" data_source="Memory" id="5" name="Generic Tree">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="3"/>
+
+  <Columns>
+    <Column id="5" name="Node ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Parent ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="1" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Link to record">
+      <Comment val="/* This field would be used to link to some other data table, in this case, the Generic Test Table */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="6" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="2" name="Node_Parent">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="5"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="4" name="Parent_Node">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="5"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="5" name="Description">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="30"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* This table is used to illustrate sending and receiving email */" FolderIsn="2" PhysicalName="eMail" Resident="N" UniqueISNConvState="12" data_source="Memory" id="6" name="eMail">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <Columns>
+    <Column id="1" name="Header Message ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="100"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="100"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Group"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Group" PIC_U="100" Size="100" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="14" name="Received Timestamp">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Timestamp"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Timestamp" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="15" name="Seq">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Seq"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Seq" PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="18" name="Checkmark">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <GuiDisplay id="158">
+          <PropertyList model="CTRL_GUI0_CHECKBOX"/>
+        </GuiDisplay>
+        <GuiDisplayTable id="159">
+          <PropertyList model="CTRL_GUI0_CHECKBOX"/>
+        </GuiDisplayTable>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="19" name="Starred">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="U"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="U" Size="1" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="20" name="Read?">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="17" name="Sent Timestamp">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="From">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="From"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="From" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="To">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="To"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="To" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Subject">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Subject"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Subject" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="7" name="Header">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Header"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Header" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="8" name="CC">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="CC"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="CC" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="BCC">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="BCC"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="BCC" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Reply to">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Reply_to"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Reply_to" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="11" name="Message Text">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="1000"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="1000"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Message_Text"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Message_Text" PIC_U="1000" Size="1000" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="12" name="# of attachments">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6C"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="#_of_attachments"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="#_of_attachments" PIC_U="6C" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="13" name="Saving attachments">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6C"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Saving_attachments"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Saving_attachments" PIC_U="6C" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="16" name="Attachment List">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Attachment_List"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Attachment_List" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Unique ID">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Unique_ID"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="100"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Checked">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="1"/>
+          <Column val="18"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* This table is used to illustrate sending and receiving email attachments*/" FolderIsn="2" PhysicalName="eMail_Attachments" Resident="N" UniqueISNConvState="12" data_source="Memory" id="7" name="eMail Attachments">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="1" name="Header Message ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="100"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="100"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="100" Size="100" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Seq#">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="6" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Attachment Location">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="256"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="256"/>
+        <Definition id="175" val="1"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="1" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ID, Seq">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="100"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* Address Book Header. The main record for each contact */" FolderIsn="3" PhysicalName="Address_Book_Hdr" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="8" name="Address Book Header">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="Y"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <PositionIndex val="-2"/>
+
+  <IndexesLastIsn val="3"/>
+
+  <Columns>
+    <Column id="1" name="Record ID">
+      <Comment val="/* YYYYMMDDHHMMSSmmmXXX: Unique timestamp, where XXX may be used to subcategorize if needed */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Hdr_Record_ID"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Hdr_Record_ID" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <DefaultValue id="170" val="acquaintance"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Hdr_Description"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Hdr_Description" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="19" name="Title">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Range id="98"/>
+        <Picture id="157" valUnicode="12"/>
+        <DefaultValue id="170"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Title"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Title" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="First Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="First_Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="First_Name" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Last Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <DefaultValue id="170"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Name" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Birthday">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <NullAllowed id="166" val="Y"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Birthday"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Birthday" PIC_U="##/##/####" Size="8" allowed_null="Y" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="20" name="Next Contact Date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <NullAllowed id="166" val="Y"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Next_Contact_Date"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Next_Contact_Date" PIC_U="##/##/####" Size="8" allowed_null="Y" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="16" name="Category">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Range id="98" valUnicode="Friend,Coworker,Client,Family,Vendor"/>
+        <Picture id="157" valUnicode="12"/>
+        <GuiDisplay id="158">
+          <PropertyList model="CTRL_GUI0_COMBOBOX"/>
+        </GuiDisplay>
+        <GuiDisplayTable id="159">
+          <PropertyList model="CTRL_GUI0_COMBOBOX"/>
+        </GuiDisplayTable>
+        <DefaultValue id="170" val="Friend"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Hdr_Category"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Hdr_Category" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="8" name="Active">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <DefaultValue id="170" val="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Active"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Active" PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="21" name="Monetary value">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="9.2C+$;--$;"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Monetary_value"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="9"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Monetary_value" PIC_U="9.2C+$;--$;" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="22" name="Default Phone">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="4"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="2"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Default_Phone"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="4"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Default_Phone" PIC_U="4" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="17" name="Last modified date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <NullAllowed id="166" val="Y"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Hdr_Last_modified_date"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Hdr_Last_modified_date" PIC_U="##/##/####" Size="8" allowed_null="Y" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="18" name="Last modified time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_TIME" id="1"/>
+        <NullAllowed id="166" val="Y"/>
+        <StoredAs id="173" val="23"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Hdr_Last_modified_time"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Hdr_Last_modified_time" PIC_U="HH:MM:SS" Size="4" allowed_null="Y" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="23" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Seq">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Seq_ADH"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Description">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Description_ADH"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="50"/>
+          <Column val="9"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="4" name="Last Name first Name">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Last_Name_first_Name_ADH"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="20"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* Phone numbers for this contact */" FolderIsn="3" PhysicalName="Addr_Phones" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="9" name="Phone Numbers">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="1" name="Record ID">
+      <Comment val="/* YYYYMMDDHHMMSSmmmXXX: Unique timestamp, where XXX may be used to subcategorize if needed */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Record_ID"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Record_ID" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="21" name="Phone Seq">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="4"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="2"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Sequence"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="4"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Sequence" PIC_U="4" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Description"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Description" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="22" name="Phone Type">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Type"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Type" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="23" name="Phone Number">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Number"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Number" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="17" name="Last modified date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Last_modified_date"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Last_modified_date" PIC_U="##/##/####" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="18" name="Last modified time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_TIME" id="1"/>
+        <StoredAs id="173" val="23"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Last_modified_time"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Last_modified_time" PIC_U="HH:MM:SS" Size="6" allowed_null="N" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="24" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Phone_Seq">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Phone_Seq_ADP"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="2"/>
+          <Column val="21"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* Addresses for this contact */" FolderIsn="3" PhysicalName="Addr_Addresses" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="10" name="Addresses">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <PositionIndex val="-2"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="1" name="Record ID">
+      <Comment val="/* YYYYMMDDHHMMSSmmmXXX: Unique timestamp, where XXX may be used to subcategorize if needed */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Record_ID"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Record_ID" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="21" name="Addr_Seq">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="4"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="2"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Sequence"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="4"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Sequence" PIC_U="4" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Description"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Description" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="22" name="Addr 1">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Addr_1"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Addr_1" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="24" name="Addr 2">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Addr_2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Addr_2" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="25" name="Addr 3">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Addr_3"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Addr_3" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="26" name="City">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_City"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_City" PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="27" name="State">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_State"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_State" PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="28" name="Postal code">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Postal_code"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Postal_code" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="29" name="Country code">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Country_Code"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Country_Code" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="23" name="Contact Phone">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Phone_Number"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Phone_Number" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="17" name="Last modified date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Last_modified_date"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Last_modified_date" PIC_U="##/##/####" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="18" name="Last modified time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_TIME" id="1"/>
+        <StoredAs id="173" val="23"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr_Last_modified_time"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr_Last_modified_time" PIC_U="HH:MM:SS" Size="4" allowed_null="N" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="23" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Addr_Seq">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Seq_ADA"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="2"/>
+          <Column val="21"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* Address Book Header. The main record for each contact */" FolderIsn="3" PhysicalName="Address_Book_Hdr" Resident="N" UniqueISNConvState="12" data_source="Local" id="25" name="Address Book Header (local)">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="Y"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <PositionIndex val="-2"/>
+
+  <IndexesLastIsn val="3"/>
+
+  <Columns>
+    <Column id="1" name="Record ID">
+      <Comment val="/* YYYYMMDDHHMMSSmmmXXX: Unique timestamp, where XXX may be used to subcategorize if needed */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Hdr_Record_ID"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Hdr_Record_ID" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="50"/>
+        <DefaultValue id="170" val="acquaintance"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Hdr_Description"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Hdr_Description" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="19" name="Title">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Range id="98"/>
+        <Picture id="157" valUnicode="12"/>
+        <DefaultValue id="170"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Title"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Title" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="First Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="First_Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="First_Name" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Last Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <DefaultValue id="170"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Name" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Seq">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Seq_ADH"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Description">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Description_ADH"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="50"/>
+          <Column val="9"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="4" name="Last Name first Name">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Last_Name_first_Name_ADH"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="20"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="4" PhysicalName="User_Logins" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="11" name="User Logins">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="7" name="UniqueID_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="UniqueID_USR"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="UniqueID_USR" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="UserID_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="130"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="130"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="UserID"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="UserID" PIC_U="130" Size="130" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Name_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="130"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="130"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Name" PIC_U="130" Size="130" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Status_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Range id="98" valUnicode="Active,Deleted"/>
+        <Picture id="157" valUnicode="U"/>
+        <GuiDisplay id="158">
+          <PropertyList model="CTRL_GUI0_COMBOBOX"/>
+        </GuiDisplay>
+        <DefaultValue id="170" val="A"/>
+        <DatabaseDefault id="171" valUnicode="A"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Status_USR"/>
+        <_Flip id="194"/>
+        <_FieldPhysical DB_DEF_VAL_U="A" Name="Status_USR" PIC_U="U" Size="1" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Password_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Password"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Password" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="NumGroups_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="3"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="2"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NumGroups_USR"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="3"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="NumGroups_USR" PIC_U="3" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="8" name="NumRights_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="3"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="2"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NumRights_USR"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="3"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="NumRights_USR" PIC_U="3" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="OtherInformation_USR">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="300"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="300"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="OtherInformation"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="OtherInformation" PIC_U="300" Size="300" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="UniqueID_USR">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="UniqueID_USR"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="Y"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="7"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="4" PhysicalName="User_Rights" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="12" name="User Rights">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <Columns>
+    <Column id="4" name="Parent_ID_RGT">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Parent_ID_RGHT"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Parent_ID_RGHT" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Unique ID_RGT">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Unique_ID_RGT"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Unique_ID_RGT" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="1" name="User ID_RGT">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="130"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="130"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="User_ID"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="User_ID" PIC_U="130" Size="130" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Right_RGT">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Right_RGT"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Right_RGT" PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Unique ID_RGT">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Unique_ID_RGT"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="Y"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="20"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="User ID_RGT">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="User_ID_RGT"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="130"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="30"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="4" PhysicalName="User_Groups" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="13" name="User Groups">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <Columns>
+    <Column id="4" name="Parent ID_GRP">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Parent_ID_GRP"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Parent_ID_GRP" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Unique ID_GRP">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Unique_ID_RGT"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Unique_ID_RGT" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="1" name="User ID_GRP">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="130"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="130"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="User_ID"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="User_ID" PIC_U="130" Size="130" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Group_GRP">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Right_RGT"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Right_RGT" PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Unique ID_GRP">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Unique_ID_GRP"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="Y"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="20"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="User ID_GRP">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="User_ID_GRP"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="130"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="30"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="5" PhysicalName="%WorkingDir%Data\AddressBook.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="14" name="Addresses.AddressBook">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
+
+  <RootName val="AddressBook"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <CompoundInViewIsn val="1"/>
+
+  <MetaTreeBuffer val="QgABAAAAAQAAAEwADEFkZHJlc3NCb29rAARuczAAQAABAAAAAgAAAAAAB05vZGVJZAABAEAAAgAAAAMAAAAAAAlQYXJlbnRJZAABAA4AAwAAAAQAAAAAAAhDb250YWN0AAEAAAADAAAABQAAAAAAClJlY29yZF9JRAABAAAABAAAAAYAAAAAAAxEZXNjcmlwdGlvbgABAAAABQAAAAcAAAAAAAZUaXRsZQABAAAABgAAAAgAAAAAAAtGaXJzdF9OYW1lAAEAAAAHAAAACQAAAAAACkxhc3RfTmFtZQABAAAACAAAAAoAAAAAAAlCaXJ0aGRheQABAAAACQAAAAsAAAAAABJOZXh0X0NvbnRhY3RfRGF0ZQABAAAACgAAAAwAAAAAAAlDYXRlZ29yeQABAAAACwAAAA0AAAAAAAdBY3RpdmUAAQAAAAwAAAAOAAAAAAAPTW9uZXRhcnlfdmFsdWUAAQAAAA0AAAAPAAAAAAATTGFzdF9tb2RpZmllZF9kYXRlAAEAAAAOAAAAEAAAAAAAE0xhc3RfbW9kaWZpZWRfdGltZQABAA4ADwAAABEAAAAAAAdQaG9uZXMAAQAAAA8AAAASAAAAAAAEU2VxAAEAAAAQAAAAEwAAAAAADVBob25lX051bWJlcgABAAAAEQAAABQAAAAAAAtQaG9uZV9UeXBlAAEAAQAOABIAAAAVAAAAAAAKQWRkcmVzc2VzAAEAAAASAAAAFgAAAAAABFNlcQABAAAAEwAAABcAAAAAAAZBZGRyMQABAAAAFAAAABgAAAAAAAZBZGRyMgABAAAAFQAAABkAAAAAAAVDaXR5AAEAAAAWAAAAGgAAAAAABlN0YXRlAAEAAAAXAAAAGwAAAAAABFppcAABAAAAGAAAABwAAAAAAAhDb3VudHJ5AAEAAQAOABkAAAAdAAAAAAAGQmxvYnMAAQAAABkAAAAeAAAAAAAEU2VxAAEAAAAaAAAAHwAAAAAABVR5cGUAAQAAABsAAAAgAAAAAAAIUGljdHVyZQABAAEAAQABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="urn:uniPaaS.printdata"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="1"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="7"/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="15"/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="5" PhysicalName="%WorkingDir%Data\AddressBook.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="15" name="Addresses.Contact">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
+
+  <RootName val="AddressBook"/>
+
+  <IndexesLastIsn val="3"/>
+
+  <CompoundInViewIsn val="4"/>
+
+  <MetaTreeBuffer val="AgABAAAAAQAAAEwADEFkZHJlc3NCb29rAARuczAAgAABAAAAAgAAAAAAB05vZGVJZAABAIAAAgAAAAMAAAAAAAlQYXJlbnRJZAABAE4BAwAAAAQAAABMAAhDb250YWN0AAEAQAADAAAABQAAAAAAClJlY29yZF9JRAABAEAABAAAAAYAAAAAAAxEZXNjcmlwdGlvbgABAEAABQAAAAcAAAAAAAZUaXRsZQABAEAABgAAAAgAAAAAAAtGaXJzdF9OYW1lAAEAQAAHAAAACQAAAAAACkxhc3RfTmFtZQABAEAACAAAAAoAAAAAAAlCaXJ0aGRheQABAEAACQAAAAsAAAAAABJOZXh0X0NvbnRhY3RfRGF0ZQABAEAACgAAAAwAAAAAAAlDYXRlZ29yeQABAEAACwAAAA0AAAAAAAdBY3RpdmUAAQBAAAwAAAAOAAAAAAAPTW9uZXRhcnlfdmFsdWUAAQBAAA0AAAAPAAAAAAATTGFzdF9tb2RpZmllZF9kYXRlAAEAQAAOAAAAEAAAAAAAE0xhc3RfbW9kaWZpZWRfdGltZQABAA4ADwAAABEAAAAAAAdQaG9uZXMAAQAAAA8AAAASAAAAAAAEU2VxAAEAAAAQAAAAEwAAAAAADVBob25lX051bWJlcgABAAAAEQAAABQAAAAAAAtQaG9uZV9UeXBlAAEAAQAOABIAAAAVAAAAAAAKQWRkcmVzc2VzAAEAAAASAAAAFgAAAAAABFNlcQABAAAAEwAAABcAAAAAAAZBZGRyMQABAAAAFAAAABgAAAAAAAZBZGRyMgABAAAAFQAAABkAAAAAAAVDaXR5AAEAAAAWAAAAGgAAAAAABlN0YXRlAAEAAAAXAAAAGwAAAAAABFppcAABAAAAGAAAABwAAAAAAAhDb3VudHJ5AAEAAQAOABkAAAAdAAAAAAAGQmxvYnMAAQAAABkAAAAeAAAAAAAEU2VxAAEAAAAaAAAAHwAAAAAABVR5cGUAAQAAABsAAAAgAAAAAAAIUGljdHVyZQABAAEAAQABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="urn:uniPaaS.printdata"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="1"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="7"/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="15"/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+    <Field Index="3"/>
+    <Field Index="4"/>
+    <Field Index="5"/>
+    <Field Index="6"/>
+    <Field Index="7"/>
+    <Field Index="8"/>
+    <Field Index="9"/>
+    <Field Index="10"/>
+    <Field Index="11"/>
+    <Field Index="12"/>
+    <Field Index="13"/>
+    <Field Index="14"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Record_ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Record_ID2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Record_ID2" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Record_ID"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Description">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="50"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="50"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Description3"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Description3" PIC_U="50" Size="50" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Description"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Title">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="12"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Title4"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Title4" PIC_U="12" Size="12" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Title"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="First_Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="First_Name5"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="First_Name5" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="First_Name"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="7" name="Last_Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Name6"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Name6" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Last_Name"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="8" name="Birthday">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="YYYY-MM-DD"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Birthday7"/>
+        <_FieldPhysical Name="Birthday7" PIC_U="YYYY-MM-DD" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="date"/>
+        <Name id="297" val="Birthday"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Next_Contact_Date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="YYYY-MM-DD"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Next_Contact_Date8"/>
+        <_FieldPhysical Name="Next_Contact_Date8" PIC_U="YYYY-MM-DD" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="date"/>
+        <Name id="297" val="Next_Contact_Date"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Category">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Category9"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Category9" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Category"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="11" name="Active">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Active10"/>
+        <_FieldPhysical Name="Active10" PIC_U="1" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="boolean"/>
+        <Name id="297" val="Active"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="12" name="Monetary_value">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="N8.2+$;--$;"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Monetary_value11"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="8"/>
+        <_Negative id="192" val="Y"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Monetary_value11" PIC_U="N8.2+$;--$;" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <_FieldStyle id="276" val="1"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Monetary_value"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="13" name="Last_modified_date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="YYYY-MM-DD"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_modified_date12"/>
+        <_FieldPhysical Name="Last_modified_date12" PIC_U="YYYY-MM-DD" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="date"/>
+        <Name id="297" val="Last_modified_date"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="14" name="Last_modified_time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_TIME" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="HH:MM:SS"/>
+        <StoredAs id="173" val="23"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_modified_time13"/>
+        <_FieldPhysical Name="Last_modified_time13" PIC_U="HH:MM:SS" Size="4" allowed_null="N" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="23" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="time"/>
+        <Name id="297" val="Last_modified_time"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="3" name="Record ID">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="3"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Last Name">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="7"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="20"/>
+          <Column val="6"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="5" PhysicalName="%WorkingDir%Data\AddressBook.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="16" name="Addresses.Phones">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
+
+  <RootName val="AddressBook"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <CompoundInViewIsn val="17"/>
+
+  <MetaTreeBuffer val="AgABAAAAAQAAAEwADEFkZHJlc3NCb29rAARuczAAgAABAAAAAgAAAAAAB05vZGVJZAABAIAAAgAAAAMAAAAAAAlQYXJlbnRJZAABAA4BAwAAAAQAAABMAAhDb250YWN0AAEAwAADAAAABQAAAAAAClJlY29yZF9JRAABAIAABAAAAAYAAAAAAAxEZXNjcmlwdGlvbgABAIAABQAAAAcAAAAAAAZUaXRsZQABAIAABgAAAAgAAAAAAAtGaXJzdF9OYW1lAAEAgAAHAAAACQAAAAAACkxhc3RfTmFtZQABAIAACAAAAAoAAAAAAAlCaXJ0aGRheQABAIAACQAAAAsAAAAAABJOZXh0X0NvbnRhY3RfRGF0ZQABAIAACgAAAAwAAAAAAAlDYXRlZ29yeQABAIAACwAAAA0AAAAAAAdBY3RpdmUAAQCAAAwAAAAOAAAAAAAPTW9uZXRhcnlfdmFsdWUAAQCAAA0AAAAPAAAAAAATTGFzdF9tb2RpZmllZF9kYXRlAAEAgAAOAAAAEAAAAAAAE0xhc3RfbW9kaWZpZWRfdGltZQABAE4BDwAAABEAAABMAAdQaG9uZXMAAQBAAA8AAAASAAAAAAAEU2VxAAEAQAAQAAAAEwAAAAAADVBob25lX051bWJlcgABAEAAEQAAABQAAAAAAAtQaG9uZV9UeXBlAAEAAQAOABIAAAAVAAAAAAAKQWRkcmVzc2VzAAEAAAASAAAAFgAAAAAABFNlcQABAAAAEwAAABcAAAAAAAZBZGRyMQABAAAAFAAAABgAAAAAAAZBZGRyMgABAAAAFQAAABkAAAAAAAVDaXR5AAEAAAAWAAAAGgAAAAAABlN0YXRlAAEAAAAXAAAAGwAAAAAABFppcAABAAAAGAAAABwAAAAAAAhDb3VudHJ5AAEAAQAOABkAAAAdAAAAAAAGQmxvYnMAAQAAABkAAAAeAAAAAAAEU2VxAAEAAAAaAAAAHwAAAAAABVR5cGUAAQAAABsAAAAgAAAAAAAIUGljdHVyZQABAAEAAQABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="urn:uniPaaS.printdata"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="1"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="7"/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="15"/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+    <Field Index="3"/>
+    <Field Index="15"/>
+    <Field Index="16"/>
+    <Field Index="17"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="7" name="/Record_ID">
+      <Comment val="/* This is the field that links this address to the Contact record. It is used to automatically assign the Node and Parent Ids */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Record_ID2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Record_ID2" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="N" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Record_ID"/>
+        <_XsdUnderViewCompound id="423"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Seq">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Seq3"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Seq3" PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <_FieldStyle id="276" val="1"/>
+        <XsdType id="292" val="int"/>
+        <Name id="297" val="Seq"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Phone_Number">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Number4"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Number4" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Phone_Number"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Phone_Type">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Phone_Type5"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Phone_Type5" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Phone_Type"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Record ID">
+      <Mode val="N"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="7"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="5" PhysicalName="%WorkingDir%Data\AddressBook.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="17" name="Addresses.Addresses">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
+
+  <RootName val="AddressBook"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <CompoundInViewIsn val="21"/>
+
+  <MetaTreeBuffer val="AgABAAAAAQAAAEwADEFkZHJlc3NCb29rAARuczAAgAABAAAAAgAAAAAAB05vZGVJZAABAIAAAgAAAAMAAAAAAAlQYXJlbnRJZAABAA4BAwAAAAQAAABMAAhDb250YWN0AAEAwAADAAAABQAAAAAAClJlY29yZF9JRAABAIAABAAAAAYAAAAAAAxEZXNjcmlwdGlvbgABAIAABQAAAAcAAAAAAAZUaXRsZQABAIAABgAAAAgAAAAAAAtGaXJzdF9OYW1lAAEAgAAHAAAACQAAAAAACkxhc3RfTmFtZQABAIAACAAAAAoAAAAAAAlCaXJ0aGRheQABAIAACQAAAAsAAAAAABJOZXh0X0NvbnRhY3RfRGF0ZQABAIAACgAAAAwAAAAAAAlDYXRlZ29yeQABAIAACwAAAA0AAAAAAAdBY3RpdmUAAQCAAAwAAAAOAAAAAAAPTW9uZXRhcnlfdmFsdWUAAQCAAA0AAAAPAAAAAAATTGFzdF9tb2RpZmllZF9kYXRlAAEAgAAOAAAAEAAAAAAAE0xhc3RfbW9kaWZpZWRfdGltZQABAA4ADwAAABEAAAAAAAdQaG9uZXMAAQAAAA8AAAASAAAAAAAEU2VxAAEAAAAQAAAAEwAAAAAADVBob25lX051bWJlcgABAAAAEQAAABQAAAAAAAtQaG9uZV9UeXBlAAEAAQBOARIAAAAVAAAATAAKQWRkcmVzc2VzAAEAQAASAAAAFgAAAAAABFNlcQABAEAAEwAAABcAAAAAAAZBZGRyMQABAEAAFAAAABgAAAAAAAZBZGRyMgABAEAAFQAAABkAAAAAAAVDaXR5AAEAQAAWAAAAGgAAAAAABlN0YXRlAAEAQAAXAAAAGwAAAAAABFppcAABAEAAGAAAABwAAAAAAAhDb3VudHJ5AAEAAQAOABkAAAAdAAAAAAAGQmxvYnMAAQAAABkAAAAeAAAAAAAEU2VxAAEAAAAaAAAAHwAAAAAABVR5cGUAAQAAABsAAAAgAAAAAAAIUGljdHVyZQABAAEAAQABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="urn:uniPaaS.printdata"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="1"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="7"/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="15"/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+    <Field Index="3"/>
+    <Field Index="18"/>
+    <Field Index="19"/>
+    <Field Index="20"/>
+    <Field Index="21"/>
+    <Field Index="22"/>
+    <Field Index="23"/>
+    <Field Index="24"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="11" name="/Record_ID">
+      <Comment val="/* This is the field that links this address to the Contact record. It is used to automatically assign the Node and Parent Ids */"/>
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Record_ID2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Record_ID2" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="N" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Record_ID"/>
+        <_XsdUnderViewCompound id="423"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Seq">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Seq3"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Seq3" PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <_FieldStyle id="276" val="1"/>
+        <XsdType id="292" val="int"/>
+        <Name id="297" val="Seq"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Addr1">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr14"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr14" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Addr1"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Addr2">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Addr25"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Addr25" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Addr2"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="7" name="City">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="City6"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="City6" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="City"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="8" name="State">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="State7"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="State7" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="State"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Zip">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Zip8"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Zip8" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Zip"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Country">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Country9"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Country9" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Country"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Record ID">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="20"/>
+          <Column val="11"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="4"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="5" PhysicalName="%WorkingDir%Data\AddressBook.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="18" name="Addresses.Blobs">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
+
+  <RootName val="AddressBook"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <CompoundInViewIsn val="29"/>
+
+  <MetaTreeBuffer val="AgABAAAAAQAAAEwADEFkZHJlc3NCb29rAARuczAAgAABAAAAAgAAAAAAB05vZGVJZAABAIAAAgAAAAMAAAAAAAlQYXJlbnRJZAABAA4BAwAAAAQAAABMAAhDb250YWN0AAEAwAADAAAABQAAAAAAClJlY29yZF9JRAABAIAABAAAAAYAAAAAAAxEZXNjcmlwdGlvbgABAIAABQAAAAcAAAAAAAZUaXRsZQABAIAABgAAAAgAAAAAAAtGaXJzdF9OYW1lAAEAgAAHAAAACQAAAAAACkxhc3RfTmFtZQABAIAACAAAAAoAAAAAAAlCaXJ0aGRheQABAIAACQAAAAsAAAAAABJOZXh0X0NvbnRhY3RfRGF0ZQABAIAACgAAAAwAAAAAAAlDYXRlZ29yeQABAIAACwAAAA0AAAAAAAdBY3RpdmUAAQCAAAwAAAAOAAAAAAAPTW9uZXRhcnlfdmFsdWUAAQCAAA0AAAAPAAAAAAATTGFzdF9tb2RpZmllZF9kYXRlAAEAgAAOAAAAEAAAAAAAE0xhc3RfbW9kaWZpZWRfdGltZQABAA4ADwAAABEAAAAAAAdQaG9uZXMAAQAAAA8AAAASAAAAAAAEU2VxAAEAAAAQAAAAEwAAAAAADVBob25lX051bWJlcgABAAAAEQAAABQAAAAAAAtQaG9uZV9UeXBlAAEAAQAOABIAAAAVAAAAAAAKQWRkcmVzc2VzAAEAAAASAAAAFgAAAAAABFNlcQABAAAAEwAAABcAAAAAAAZBZGRyMQABAAAAFAAAABgAAAAAAAZBZGRyMgABAAAAFQAAABkAAAAAAAVDaXR5AAEAAAAWAAAAGgAAAAAABlN0YXRlAAEAAAAXAAAAGwAAAAAABFppcAABAAAAGAAAABwAAAAAAAhDb3VudHJ5AAEAAQBOARkAAAAdAAAATAAGQmxvYnMAAQBAABkAAAAeAAAAAAAEU2VxAAEAQAAaAAAAHwAAAAAABVR5cGUAAQBAABsAAAAgAAAAAAAIUGljdHVyZQABAAEAAQABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="urn:uniPaaS.printdata"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="1"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="8"/>
+    <SchemaField DataTypeIdx="7"/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="37"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="15"/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+    <Field Index="3"/>
+    <Field Index="25"/>
+    <Field Index="26"/>
+    <Field Index="27"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="66" name="/Record_ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Record_ID2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Record_ID2" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="N" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Record_ID"/>
+        <_XsdUnderViewCompound id="423"/>
+      </PropertyList>
+    </Column>
+    <Column id="60" name="Seq">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Seq2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="Seq2" PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <_FieldStyle id="276" val="1"/>
+        <XsdType id="292" val="int"/>
+        <Name id="297" val="Seq"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="61" name="Type">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Type3"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Type3" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Type"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="62" name="Picture">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_BLOB" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157"/>
+        <StoredAs id="173" val="29"/>
+        <Size id="174" val="28"/>
+        <Definition id="175" val="1"/>
+        <DbColumnName id="178" val="Picture4"/>
+        <_FieldPhysical Name="Picture4" Size="28" allowed_null="Y" attribute="O" context_cookies="Y" database_definition="1" id="231" storage="29"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="Base64Binary"/>
+        <Name id="297" val="Picture"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="2" name="Record ID">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="15"/>
+          <Column val="66"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="4"/>
+          <Column val="60"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="6" PhysicalName="%WorkingDir%Data\CustLetter.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="19" name="Addresses.Letters">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
+
+  <RootName val="Letters"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <CompoundInViewIsn val="1"/>
+
+  <MetaTreeBuffer val="QgABAAAAAQAAAEwACExldHRlcnMABG5zMABAAAEAAAACAAAAAAAHTm9kZUlkAAEAQAACAAAAAwAAAAAACVBhcmVudElkAAEADgADAAAABAAAAAAAC0N1c3RMZXR0ZXIAAQAAAAMAAAAFAAAAAAAFTFNlcQABAAAABAAAAAYAAAAAAAVOYW1lAAEAAAAFAAAABwAAAAAAB0N1c3RJRAABAAAABgAAAAgAAAAAAAhEdWVEYXRlAAEAAQABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="urn:uniPaaS.printdata"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField DataTypeIdx="34"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="34"/>
+    <SchemaField DataTypeIdx="8"/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="6" PhysicalName="%WorkingDir%Data\CustLetter.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="20" name="Addresses.CustLetter">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="D:\AACurr\Classes\ExamplesFinished\Resources\Addresses.xsd"/>
+
+  <RootName val="Letters"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <CompoundInViewIsn val="4"/>
+
+  <MetaTreeBuffer val="AgABAAAAAQAAAEwACExldHRlcnMABG5zMACAAAEAAAACAAAAAAAHTm9kZUlkAAEAgAACAAAAAwAAAAAACVBhcmVudElkAAEATgEDAAAABAAAAEwAC0N1c3RMZXR0ZXIAAQBAAAMAAAAFAAAAAAAFTFNlcQABAEAABAAAAAYAAAAAAAVOYW1lAAEAQAAFAAAABwAAAAAAB0N1c3RJRAABAEAABgAAAAgAAAAAAAhEdWVEYXRlAAEAAQABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="urn:uniPaaS.printdata"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField DataTypeIdx="34"/>
+    <SchemaField/>
+    <SchemaField DataTypeIdx="34"/>
+    <SchemaField DataTypeIdx="8"/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+    <Field Index="3"/>
+    <Field Index="4"/>
+    <Field Index="5"/>
+    <Field Index="6"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="LSeq">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="10"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="LSeq2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="10"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="LSeq2" PIC_U="10" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="positiveInteger"/>
+        <Name id="297" val="LSeq"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="40"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="40"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Name2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Name2" PIC_U="40" Size="40" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="Name"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="CustID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="10"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="CustID3"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="10"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="CustID3" PIC_U="10" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="positiveInteger"/>
+        <Name id="297" val="CustID"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="DueDate">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="YYYY-MM-DD"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="DueDate4"/>
+        <_FieldPhysical Name="DueDate4" PIC_U="YYYY-MM-DD" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="date"/>
+        <Name id="297" val="DueDate"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* This data source definition was created automatically, by using Get Definition on the XSD provided by the SOAP service */" FolderIsn="7" PhysicalName="CountryName.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="21" name="CountryInfoService_CountryName">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="C:\uniPaaS1_9\SoapClientModules\SOAPLITE\CountryInfoService_CountryName_In.xsd"/>
+
+  <RootName val="CountryName"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <CompoundInViewIsn val="1"/>
+
+  <MetaTreeBuffer val="QgEBAAAAAQAAAEwADENvdW50cnlOYW1lAARuczAAQAABAAAAAgAAAAAAB05vZGVJZAABAEAAAgAAAAMAAAAAAAlQYXJlbnRJZAABAEAAAwAAAAQAAAAAABBzQ291bnRyeUlTT0NvZGUABG5zMAABAA=="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="http://www.oorsprong.org/websamples.countryinfo"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+    <Field Index="3"/>
+    <Field Index="1"/>
+    <Field Index="2"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="sCountryISOCode">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="sCountryISOCode2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="sCountryISOCode2" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="sCountryISOCode"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject Comment="/* This data source definition was created automatically, by using Get Definition on the XSD provided by the SOAP service */" FolderIsn="8" PhysicalName="CountryNameResponse.xml" Resident="N" UniqueISNConvState="12" data_source="Default XML Database" id="22" name="CountryInfoService_CountryName">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <SchemaDoc val="C:\uniPaaS1_9\SoapClientModules\SOAPLITE\CountryInfoService_CountryName_Out.xsd"/>
+
+  <RootName val="CountryNameResponse"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <CompoundInViewIsn val="1"/>
+
+  <MetaTreeBuffer val="QgEBAAAAAQAAAEwAFENvdW50cnlOYW1lUmVzcG9uc2UABG5zMABAAAEAAAACAAAAAAAHTm9kZUlkAAEAQAACAAAAAwAAAAAACVBhcmVudElkAAEAQAADAAAABAAAAAAAEkNvdW50cnlOYW1lUmVzdWx0AARuczAAAQA="/>
+
+  <Resource/>
+
+  <Resource>
+    <name val="ns0"/>
+    <Comment val="http://www.oorsprong.org/websamples.countryinfo"/>
+  </Resource>
+
+  <SchemaPreFields>
+    <SchemaField FldType="1"/>
+    <SchemaField FldType="1"/>
+    <SchemaField/>
+  </SchemaPreFields>
+
+  <ViewFieldsMap>
+    <Field Index="1"/>
+    <Field Index="2"/>
+    <Field Index="3"/>
+    <Field Index="1"/>
+    <Field Index="2"/>
+  </ViewFieldsMap>
+
+  <Columns>
+    <Column id="1" name="NodeId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="NodeId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="NodeId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="ParentId">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Modifiable id="53"/>
+        <Picture id="157" valUnicode="12"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ParentId"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_FieldPhysical Name="ParentId" PIC_U="12" Size="8" allowed_null="N" attribute="N" context_cookies="N" database_definition="2" id="231" storage="6" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="CountryNameResult">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Modifiable id="53" val="Y"/>
+        <Picture id="157" valUnicode="200"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="200"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="CountryNameResult2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="CountryNameResult2" PIC_U="200" Size="200" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+        <DefaultStorage id="274" val="Y"/>
+        <XsdType id="292" val="string"/>
+        <Name id="297" val="CountryNameResult"/>
+        <_XsdUnderViewCompound id="423" val="Y"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="ByNode">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="ByNode"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="8"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="9" PhysicalName="Current_Queue" Resident="N" UniqueISNConvState="12" data_source="Memory" id="23" name="Current Queue">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="15" name="Sequence">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="6" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="16" name="Select?">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <GuiDisplay id="158">
+          <PropertyList model="CTRL_GUI0_CHECKBOX"/>
+        </GuiDisplay>
+        <GuiDisplayTable id="159">
+          <PropertyList model="CTRL_GUI0_CHECKBOX"/>
+        </GuiDisplayTable>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="1" name="Application Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Program Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="User Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="Priority">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="3"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="2"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="3"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="3" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Submit Host">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="PID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="14" name="Submit Date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_DATE" id="1"/>
+        <StoredAs id="173" val="19"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="##/##/####" Size="8" allowed_null="N" attribute="D" context_cookies="Y" database_definition="2" id="231" storage="19" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="7" name="Submit Time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_TIME" id="1"/>
+        <StoredAs id="173" val="23"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="HH:MM:SS" Size="4" allowed_null="N" attribute="T" context_cookies="Y" database_definition="2" id="231" storage="23" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="8" name="Elapsed Execution Time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="6C"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="6"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="6C" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Request ID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Request ID Status">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="11" name="General Request Return Code">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="12" name="Runtime Return Code">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="13" name="Runtime engine address and port">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="1"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="1" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Request ID">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="30"/>
+          <Column val="9"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="10" PhysicalName="Device_ids" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="24" name="Push Notification Device IDs">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <PositionIndex val="-2"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="2" name="device_OS">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Range id="98" valUnicode="android,ios,win10mobile"/>
+        <Picture id="157" valUnicode="15"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="15"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="device_OS"/>
+        <_Dec id="181"/>
+        <_Whole id="182"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="device_OS" PIC_U="15" Size="15" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="1" name="device_id">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="255"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="255"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="device_id"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="device_id" PIC_U="255" Size="255" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="device_os_id">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="device_id"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="15"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+        <Segment>
+          <Size val="255"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="11" PhysicalName="Local_sync_table" Resident="N" UniqueISNConvState="12" data_source="Local" id="26" name="Local sync table">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="2" name="Idx">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="2"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="2"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Idx"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="2"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Idx" PIC_U="2" Size="2" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="1" name="Last Modified Server to Client">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="14"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="14"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Modified_StoC"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Modified_StoC" PIC_U="14" Size="14" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Last Modified Client to Server">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="14"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="14"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Modified_CtoS"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Modified_CtoS" PIC_U="14" Size="14" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="byidx">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="byidx"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="2"/>
+          <Column val="2"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="11" PhysicalName="Customers" Resident="N" UniqueISNConvState="12" data_source="RIASamples" id="27" name="Customers">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <PositionIndex val="-2"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="1" name="Customer Code">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="9"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Customer_Code"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="9"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Customer_Code" PIC_U="8NC" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Customer Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Customer_Name"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Customer_Name" PIC_U="N8.2C+$;--$;" Size="20" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Country">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Country"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Country" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="City">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="City"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="City" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Address">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Address"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Address" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Gold Membership">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Gold_Membership"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Gold_Membership" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Salary Amount">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="12.2C"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Salary_Amount"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Salary_Amount" PIC_U="8" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Credit Amount">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="12.2C"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Credit_Amount"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Credit_Amount" PIC_U="8" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="13" name="Deleted">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Deleted"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Deleted" PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="11" name="Last Modified Timestamp">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="14"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="14"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Modified"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Modified" PIC_U="14" Size="14" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Customer_Code">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Customer_Code"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject FolderIsn="11" PhysicalName="Customers" Resident="N" UniqueISNConvState="12" data_source="Local" id="28" name="Customers-Local">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <PositionIndex val="-2"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <Columns>
+    <Column id="1" name="Customer Code">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="9"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Customer_Code"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="9"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Customer_Code" PIC_U="8NC" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="2" name="Customer Name">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Customer_Name"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="20"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Customer_Name" PIC_U="N8.2C+$;--$;" Size="20" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="3" name="Country">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Country"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Country" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="4" name="City">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="City"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="City" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="5" name="Address">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="20"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="20"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Address"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Address" PIC_U="20" Size="20" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="6" name="Gold Membership">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Gold_Membership"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Gold_Membership" PIC_U="256" Size="256" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="9" name="Salary Amount">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="12.2C"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Salary_Amount"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Salary_Amount" PIC_U="8" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="10" name="Credit Amount">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="12.2C"/>
+        <StoredAs id="173" val="6"/>
+        <Size id="174" val="8"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Credit_Amount"/>
+        <_Dec id="181" val="2"/>
+        <_Whole id="182" val="12"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Credit_Amount" PIC_U="8" Size="8" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="6" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="12" name="Deleted">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Deleted"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Deleted" PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="11" name="Last Modified Timestamp">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="14"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="14"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Last_Modified"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Last_Modified" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="1" name="Customer_Code">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="Customer_Code"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="1"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject>  </DataObjects>
+ </DataSourceRepository>
+  </Application>
